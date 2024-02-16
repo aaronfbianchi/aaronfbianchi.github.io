@@ -6,6 +6,7 @@
 /*
  *  Owl Carousel - Core
  */
+ 
 .owl-carousel {
   display: none;
   width: 100%;
@@ -168,3 +169,7 @@
   z-index: 1;
   height: 100%;
   width: 100%; }
+
+.owl-carousel .owl-item {
+  margin-right: 10000px; /* Set the width of each item to adjust the spacing */
+}

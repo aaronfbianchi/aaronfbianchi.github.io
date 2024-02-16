@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: background 0.5s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 7680px) {
   .back-to-top {
     bottom: 15px;
   }
@@ -703,24 +703,61 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
-/* Clients Section
---------------------------------*/
+/* Clients Section -------------------------------- */
 #clients {
-  padding: 30px 0;
+  overflow-x: hidden;
+  /*border: solid blue 2px;*/
+  padding: 30px 0; /* Add padding to the top and bottom of the container */
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+  align-items: center; /* Center items vertically */
 }
 
-#clients img {
-  max-width: 100%;
+.owl-carousel {
+  justify-content: space-between !important;
+}
+
+.clients-carousel img {
+  display: flex;
+  width: 600px !important; /* Set the width of the images */
+  height: 10vw; /* Set the height of the images */
+  justify-content: space-between !important;
   opacity: 0.5;
   transition: 0.3s;
-  padding: 15px 0;
 }
 
-#clients img:hover {
+.clients-container {
+  width: 200vw;
+  /*border: solid green 2px;*/
+  margin-left: -50vw;
+}
+.clients-container {
+  /*overflow-x: hidden; /* or overflow-x: scroll; */
+}
+.clients-container::-webkit-scrollbar {
+  /*display: none; /* Hide the scrollbar on WebKit browsers */
+}
+.clients-container {
+  /*scrollbar-width: None; /* Hide the scrollbar on Firefox */
+}
+
+.clients-carousel img:hover {
   opacity: 1;
 }
 
-#clients .owl-nav, #clients .owl-dots {
+.img-carousel{
+  /*border: solid blue 2px;*/
+}
+
+#clients {
+  width: 100%; /* Set the width of the container to 1200 pixels */
+  /*overflow-x: auto; /* Add horizontal scrolling for overflow */
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+  align-items: center; /* Center items vertically */
+}
+
+#clients .owl-nav,
+#clients .owl-dots {
   margin-top: 5px;
   text-align: center;
 }
@@ -737,6 +774,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #clients .owl-dot.active {
   background-color: #ff004c;
 }
+
 
 /* Our Portfolio Section
 --------------------------------*/

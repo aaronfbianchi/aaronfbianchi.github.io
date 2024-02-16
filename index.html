@@ -52,13 +52,30 @@
         <!--i class="fa fa-phone"></i> +1 5589 55488 55-->
       </div>
       <div class="social-links float-right">
-        <a href="#" class="spotify"><img src="img/spotify.webp" alt="Spotify" class="social-icon"></a>
-        <a href="#" class="applemusic"><img src="img/applemusic.png" alt="Apple Music" class="social-icon"></a>
-        <a href="#" class="youtube"><img src="img/youtube.webp" alt="YouTube" class="social-icon"></a>
-        <a href="#" class="twitter"><img src="img/twitter.png" alt="Twitter" class="social-icon"></a>
-        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="spotify">
+			<img src="img/spotify.webp" alt="Spotify" class="social-icon">
+		</a>
+        <a href="#" class="itunes">
+			<i class="fa fa-music"></i>
+		</a>
+        <a href="#" class="youtube">
+			<i class="fa fa-youtube-play"></i>
+		</a>
+		<a href="#" class="amazon">
+			<i class="fa fa-amazon"></i>
+		</a>
+		<a href="#" class="twitter">
+			<i class="fa fa-twitter"></i>
+		</a>
+        <!--a href="#" class="instagram">
+			<i class="fa fa-instagram"></i>
+		</a>
+        <a href="#" class="google-plus">
+			<i class="fa fa-google-plus"></i>
+		</a>
+        <a href="#" class="linkedin">
+			<i class="fa fa-linkedin"></i>
+		</a-->
       </div>
     </div>
   </section>
@@ -109,13 +126,8 @@
       </div>
     </div>
 
-    <div class="video-container">
-      <video autoplay loop muted>
-	<source src="img/v_short_demon.mp4" type="video/mp4">
-      </video>
-      <div class="content">
-        <!-- Your content here -->
-      </div>
+    <div id="intro-carousel" class="owl-carousel" >
+      <div class="item" style="background-image: url('img/demon_osc_3.webp');"></div>
       <!--div class="item" style="background-image: url('img/intro-carousel/2.jpg');"></div>
       <div class="item" style="background-image: url('img/intro-carousel/3.jpg');"></div>
       <div class="item" style="background-image: url('img/intro-carousel/4.jpg');"></div>
@@ -159,7 +171,7 @@
       <div class="container">
         <div class="section-header">
           <h2>Services</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <p>Well, I hate to repeat myself but I DO make loud music ngl.</p>
         </div>
 
         <div class="row">
@@ -208,18 +220,15 @@
       <div class="container">
         <div class="section-header">
           <h2>Projects</h2>
-          <p>These are some games I've been working on in the last few years</p>
+          <p>These are some games I've worked on in the last few years</p>
         </div>
 
-        <div class="owl-carousel clients-carousel">
-          <img src="img/clients/client-1.png" alt="">
-          <img src="img/clients/client-2.png" alt="">
-          <img src="img/clients/client-3.png" alt="">
-          <img src="img/clients/client-4.png" alt="">
-          <img src="img/clients/client-5.png" alt="">
-          <img src="img/clients/client-6.png" alt="">
-          <img src="img/clients/client-7.png" alt="">
-          <img src="img/clients/client-8.png" alt="">
+        <div class="owl-carousel clients-carousel clients-container">
+          <img src="img/clients/gttod.svg" class="img-carousel"/>
+          <img src="img/clients/turing.svg" class="img-carousel"/>
+          <img src="img/clients/peerreview.svg" class="img-carousel"/>
+          <img src="img/clients/hazardcourse.svg" class="img-carousel"/>
+          <img src="img/clients/3dsudoku.svg" class="img-carousel"/>
         </div>
 
       </div>
@@ -593,6 +602,8 @@
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -610,6 +621,6 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-
+	
 </body>
 </html>
