@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 176 176"
+   enable-background="new 0 0 176 176"
+   xml:space="preserve"
+   sodipodi:docname="ytmusic.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:ns="&amp;ns_sfw;"><defs
+   id="defs26162"><inkscape:path-effect
+     effect="powerclip"
+     id="path-effect26692"
+     is_visible="true"
+     lpeversion="1"
+     inverse="true"
+     flatten="false"
+     hide_clip="false"
+     message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." /><clipPath
+     clipPathUnits="userSpaceOnUse"
+     id="clipPath26688"><polygon
+       id="polygon26690"
+       fill="#FFFFFF"
+       points="111,87 72,65 72,111 "
+       style="display:none;fill:#000000"
+       d="M 111,87 72,65 v 46 z" /><path
+       id="lpe_path-effect26692"
+       style="display:inline;fill:#000000"
+       class="powerclip"
+       d="M -5,-5 H 181 V 181 H -5 Z M 111,87 72,65 v 46 z" /></clipPath></defs><sodipodi:namedview
+   id="namedview26160"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="true"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="5.8352273"
+   inkscape:cx="80.288218"
+   inkscape:cy="88.085686"
+   inkscape:window-width="2515"
+   inkscape:window-height="1408"
+   inkscape:window-x="45"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<metadata
+   id="metadata26153">
+	<ns:sfw>
+		<ns:slices />
+		<ns:sliceSourceBounds
+   bottomLeftOrigin="true"
+   height="176"
+   width="176"
+   x="8"
+   y="-184" />
+	</ns:sfw>
+</metadata>
+<g
+   id="XMLID_167_"
+   style="fill:#ffffff">
+	<path
+   id="XMLID_791_"
+   fill="#FF0000"
+   style="display:inline;fill:#ffffff"
+   clip-path="url(#clipPath26688)"
+   d="M 176,88 A 88,88 0 0 1 88,176 88,88 0 0 1 0,88 88,88 0 0 1 88,0 88,88 0 0 1 176,88 Z"
+   sodipodi:type="arc"
+   sodipodi:ry="88"
+   sodipodi:rx="88"
+   sodipodi:cy="88"
+   sodipodi:cx="88"
+   inkscape:path-effect="#path-effect26692" />
+	<path
+   id="XMLID_42_"
+   fill="#FFFFFF"
+   d="m 88,46 c 23.1,0 42,18.8 42,42 0,23.2 -18.8,42 -42,42 C 64.8,130 46,111.2 46,88 46,64.8 64.9,46 88,46 m 0,-4 c -25.4,0 -46,20.6 -46,46 0,25.4 20.6,46 46,46 25.4,0 46,-20.6 46,-46 0,-25.4 -20.6,-46 -46,-46 z"
+   style="display:inline;fill:#000000" />
+	
+</g>
+</svg>

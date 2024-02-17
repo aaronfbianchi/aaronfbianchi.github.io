@@ -576,8 +576,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   overflow: hidden;
 }
 
+/*.aboutlogo{
+  width: 800px;
+  height: 500px;
+}*/
+
 #about .about-img img {
-  margin-left: -15px;
   max-width: 100%;
 }
 
@@ -669,9 +673,18 @@ body.mobile-nav-active #mobile-nav-toggle {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.poto{display: flex;
+    justify-content: center;
+}
+.streaming{
+  width: 200px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
 
 #services .box h4 {
-  margin-left: 100px;
+  margin-left: 0px;
+  text-align: center;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 22px;
@@ -686,6 +699,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-left: 100px;
   margin-bottom: 0;
   line-height: 24px;
+}
+
+.flex-column{
+    display: flex !important;
+    flex-direction: column-reverse !important;
 }
 
 @media (max-width: 767px) {
@@ -727,7 +745,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .clients-container {
-  width: 200vw;
+  width: 190vw;
   /*border: solid green 2px;*/
   margin-left: -50vw;
 }
@@ -1033,7 +1051,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #contact .contact-info address, #contact .contact-info p {
   margin-bottom: 0;
-  color: #000;
+  color: #999;
 }
 
 #contact .contact-info h3 {
@@ -1045,7 +1063,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .contact-info a {
-  color: #000;
+  color: #999;
 }
 
 #contact .contact-info a:hover {
@@ -1056,14 +1074,32 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 20px;
 }
 
+.flex{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contacts{
+}
+
+.discord{
+  margin-top:20px;
+  margin-bottom:32px;
+  height: 30px;
+}
+
+.col-md-4 {
+}
+
 @media (min-width: 768px) {
   #contact .contact-address, #contact .contact-phone, #contact .contact-email {
-    padding: 20px 0;
+    padding: 20px 20px;
   }
 }
 
 @media (min-width: 768px) {
   #contact .contact-phone {
+    border: solid green 2px;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
   }
