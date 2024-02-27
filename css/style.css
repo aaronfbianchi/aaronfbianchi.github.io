@@ -8,6 +8,7 @@
 # General
 --------------------------------------------------------------*/
 body {
+  /*position: relative;*/
   background: #000;
   color: #fff;
   font-family: "Source Code Pro", sans-serif;
@@ -1181,9 +1182,25 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+
+.vid-footer {
+  background-repeat: no-repeat;
+  background-position: center;
+  /*border: solid green 2px;*/
+  background-size: cover;
+  position: absolute; /* Position the image absolutely */
+  top: 0px; /* Align the image to the top of the footer */
+  left: 0; /* Align the image to the left of the footer */
+  width: 100%; /* Make the image span the full width of the footer */
+  height: 580px;
+  z-index: -1; /* Set a lower z-index to place the image behind other content */
+}
+
 #footer {
+  max-width: 100%;
+  width: 100%;
+  position: relative; /* Ensure the footer is positioned relatively */
   margin-top: 0px;
-  background: #000000;
   padding: 0px 0 30px 0;
   font-size: 14px;
 }
