@@ -800,6 +800,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /* Our Portfolio Section
 --------------------------------*/
+
+.vid-port {
+  display: flex;
+  justify-content: center;
+  
+}
+
 #portfolio {
   background: #000;
   padding: 30px 0;
