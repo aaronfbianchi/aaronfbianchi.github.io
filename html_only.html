@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aaron F. Bianchi</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    .chakra {
+      font-family: "Chakra Petch", sans-serif;
+    }
+
+    .code {
+      font-family: "Source Code Pro", sans-serif;
+    }
+
+    :root {
+      --acc-rojo: #ff004c;
+      --acc-azul: #00d0ff;
+      --bg:       #000;
+      --clear:     #fff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--clear);
+    }
+
+    h1 {
+      font-size: 44px;
+      margin: 0; 
+    }
+    h2 {
+      font-size: 52px;
+      margin: 0; 
+    }
+    h3 {
+      font-size: 36px; 
+      color: var(--acc-azul); 
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    h4 {
+      font-size: 18px; 
+      color: var(--clear); 
+      font-weight: lighter;
+      font-style: italic;
+      line-height: 1.5;
+    }
+    h5 {
+      font-size: 16px; 
+      color: var(--clear); 
+      font-weight: normal;
+      line-height: 1.5;
+    }
+
+    .center-content {
+      max-width: 100vh;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* @media (max-width: 1280px) {
+      .center-content {
+        max-width: 1200px;
+      }
+    }
+        @media (max-width: 1920px) {
+      .center-content {
+        max-width: 1600px;
+      }
+    } */
+
+    .links-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px;
+      padding-bottom: 15px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--clear);
+    }
+
+    .links-bar a {
+      color: var(--clear);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .links-bar a:hover {
+      color: var(--acc-rojo);
+    }
+
+    .sticky-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0; /* se va a quedar pegadazo como chicle cuando se quede a 0px del margen de arriba */
+      background-color: var(--bg);
+      color: var(--clear);
+      padding: 10px;
+      z-index: 100;
+    }
+
+    .links-r a {
+      padding-left: 20px;
+      color: var(--clear);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .links-r a:hover {
+      color: var(--acc-rojo);
+    }
+
+    .sticky-section a {
+      font-weight: bold;
+    }
+
+    /*---------------------------------*/
+    .video-background {
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      overflow: hidden;
+    }
+
+    .video-background video {
+      position: absolute;
+      opacity: 0.8;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 60%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    .video-overlay-text {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      top: 47%;
+      transform: translateY(-40%);
+      padding: 20px;
+      color: black;
+      text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+    }
+    /*---------------------------------*/
+
+    .container-center {
+      display: flex;
+      justify-content: center;  /* Center horizontally */
+      gap: 20px;                /* Space between the boxes */
+      
+      margin: auto;
+    }
+
+    .item-in-container {
+      flex: 1;  
+      width: 150px;
+      height: auto;
+    }
+
+    .item-in-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 900px) {
+      .container-center {
+        flex-direction: column;
+        align-items: center; /* optional: center items when stacked */
+      }
+
+      .item-in-container {
+        width: 100%; /* full width when stacked */
+      }
+    }
+
+    ul {
+      list-style: none;        /* removes the bullet */
+      padding-left: 0;         /* optional: removes indent */
+      margin-left: 0;          /* optional: aligns flush */
+    }
+
+    ul li {
+      margin-bottom: 8px;      /* optional: spacing between items */
+      display: flex;           /* aligns icon and text horizontally */
+      align-items: center;
+      line-height: 1.7;
+      font-family: "Source Code Pro", sans-serif;
+    }
+
+    ul li i {
+      margin-right: 8px;       /* space between icon and text */
+      color: var(--acc-rojo);  /* optional: set icon color */
+    }
+
+    /*---------------------------------*/
+
+    .small-line {
+      width: 50px;            /* or any fixed width you want */
+      height: 3px;            /* or any fixed width you want */
+      margin-top: 20px;
+      background-color: var(--acc-rojo);  /* or your desired color */
+      border-radius: 0px;      /* optional: rounded corners */
+      margin-left: 0;          /* aligns to the left */
+    }
+
+    /*---------------------------------*/
+
+    .carousel {
+      width: 99vw;
+      overflow: hidden;
+      margin: auto;
+      border-top: 4px solid var(--bg);
+      border-bottom: 4px solid var(--bg);
+    }
+
+    .carousel-track {
+      align-items: center;
+      display: flex;
+      animation: slide 10s infinite;
+    }
+
+    .carousel-track a img {
+      align-items: center;
+      width: 600px;
+      height: auto;
+      object-fit: contain;
+      background: var(--bg);
+      padding: 20px;
+      flex-shrink: 0;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
+    .carousel-track a img:hover {
+      opacity: 1;
+    }
+
+    @keyframes slide {
+      0%, 15% {
+        transform: translateX(0);
+      }
+      20%, 35% {
+        transform: translateX(-650px);
+      }
+      40%, 55% {
+        transform: translateX(-1300px);
+      }
+      60%, 75% {
+        transform: translateX(-1950px);
+      }
+      80%, 95% {
+        transform: translateX(-2650px);
+      }
+      100%, 100% {
+        transform: translateX(-3265px);
+      }
+    }
+
+  </style>
+</head>
+<body id="body">
+  <div class="links-bar center-content">
+    <a href="mailto:aaronf.bianchi@gmail.com" class="code">aaronf.bianchi@gmail.com</a>
+    <div class="code links-r">
+      <a href="https://open.spotify.com/artist/7IsJv5qSfAQiIdee3wzaBJ">Spotify</a>
+      <a href="https://music.apple.com/pe/artist/aaron-f-bianchi-jupiter/1527705673">iTunes</a>
+      <a href="https://music.youtube.com/channel/UC2QFPZfv-Qnc24bvPqBK9NA">YT Music</a>
+      <a href="https://music.amazon.com/es-ar/artists/B08FWTYZMM/aaron-f-bianchi-jupiter">Amazon Music</a>
+      <a href="https://twitter.com/AaronFBianchi">Twitter</a>
+    </div>
+  </div>
+
+  <div class="sticky-section center-content">
+    <div><h1><a href="#body" style="color:var(--acc-azul); text-decoration:none;" class="chakra">Aaron F. Bianchi</a></h1></div>
+    <div class="code links-r">
+      <a href="#portfolio">Portfolio</a>
+      <a href="https://music.apple.com/pe/artist/aaron-f-bianchi-jupiter/1527705673">Testimonials</a>
+      <a href="https://music.youtube.com/channel/UC2QFPZfv-Qnc24bvPqBK9NA">Contact</a>
+    </div>
+  </div>
+
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="img/demon_osc_3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="video-overlay-text chakra">
+      <h2 style="color:var(--acc-azul); text-decoration:none;">Get your eardrums</h2>
+      <h2 style="color:var(--acc-rojo); text-decoration:underline;">READY!</h2>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 50px;" class="container-center center-content">
+    <div class="item-in-container">
+      <img src="img/aaronicon.svg" alt="">
+    </div>
+    <div class="item-in-container chakra">
+      <h3>ABOUT</h3>
+      <h4>Hey there! I'm Aaron, a music creator specializing in intense electronic and metal genres. I enjoy doing many other genres too.</h4>
+      <h4>I started making music back when I was studying at uni and now I make a living composing for video games and streaming services.</h4>
+      <h4>I also enjoy coding small programs from time to time as well as trying new software to make my music.</h4>
+      <h4>These are some random facts about me:</h4>
+      <ul>
+        <li><i class="fas fa-check"></i> Loud music enjoyer.</li>
+        <li><i class="fas fa-check"></i> Big Half-Life and Doom nerd.</li>
+        <li><i class="fas fa-check"></i> I also speak Spanish.</li>
+        <li><i class="fas fa-check"></i> im_something_of_a_scientist_myself.jpg</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="center-content" style="margin-top: 50px;">
+    <h3 class="chakra">PROJECTS</h3>
+    <div class="small-line"></div>
+    <h5 class="code">These are some projects I have worked on as a composer in recent years.</h5>
+  </div>
+
+  <div class="carousel">
+    <div class="carousel-track">
+      <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank">
+        <img src="img/clients/gttod.svg" alt="Slide 1">
+      </a>
+      <a href="https://store.steampowered.com/app/1444480/Turing_Complete/" target="_blank">
+        <img src="img/clients/turing.svg" alt="Slide 2">
+      </a>
+      <a href="https://www.moddb.com/mods/peer-review" target="_blank">
+        <img style="margin-right: 15px;"src="img/clients/peerreview.svg" alt="Slide 3">
+      </a>
+      <a href="https://aaron-f-bianchi.itch.io/actual-3d-sudoku" target="_blank">
+        <img style="margin-left: 50px;" src="img/clients/3dsudoku.svg" alt="Slide 4">
+      </a>
+      <a href="https://www.moddb.com/mods/black-mesa-hazard-course" target="_blank">
+        <img src="img/clients/hazardcourse.svg" alt="Slide 5">
+      </a>
+      <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank">
+        <img src="img/clients/gttod.svg" alt="Slide 1">
+      </a>
+      <a href="https://store.steampowered.com/app/1444480/Turing_Complete/" target="_blank">
+        <img src="img/clients/turing.svg" alt="Slide 2">
+      </a>
+      <a href="https://www.moddb.com/mods/peer-review" target="_blank">
+        <img style="margin-right: 15px;"src="img/clients/peerreview.svg" alt="Slide 3">
+      </a>
+    </div>
+  </div>
+
+  <div id="portfolio" class="center-content" style="margin-top: 50px;">
+    <h3 class="chakra">DEMO REEL</h3>
+    <div class="small-line"></div>
+    <div style="margin-top: 30px; " id="video-container" class="vid-port">
+      <iframe style="display: block; margin: 0 auto;" width="960" height="540" src="https://www.youtube.com/embed/EtrEmkpgJVI?si=RlN7RN6GjlCTG65g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="center-content" style="margin-top: 50px;">
+    <h3 class="chakra">PORTFOLIO</h3>
+    <div class="small-line"></div>
+    <h5 class="code">Take a listen to some of my work!</h5>
+  </div>
+
+  <div >
+    <p>dame el p0to</p>
+    <p style="height: 20000px;">o te rebiento</p>
+    <p>xd</p>
+  </div>
+
+</body>
+</html>
