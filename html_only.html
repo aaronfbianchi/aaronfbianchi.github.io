@@ -24,69 +24,89 @@
       --acc-azul: #00d0ff;
       --bg:       #000;
       --clear:     #fff;
+      --carr-div: 3;
     }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 100px;
+      scroll-padding-top: 50px;
     }
 
     body {
       background-color: var(--bg);
       color: var(--clear);
+      margin: 0px;
     }
 
     h1 {
       font-size: 44px;
-      margin: 0; 
+      margin: 0;
     }
-    h2 {
+    h4 {
       font-size: 52px;
-      margin: 0; 
+      margin: 0;
     }
     h3 {
-      font-size: 36px; 
-      color: var(--acc-azul); 
+      font-size: 36px;
+      color: var(--acc-azul);
       font-weight: bold;
       margin-bottom: 10px;
     }
-    h4 {
-      font-size: 18px; 
-      color: var(--clear); 
+    h2 {
+      font-size: 18px;
+      color: var(--clear);
       font-weight: lighter;
       font-style: italic;
       line-height: 1.5;
     }
     h5 {
-      font-size: 16px; 
-      color: var(--clear); 
+      font-size: 16px;
+      color: var(--clear);
       font-weight: normal;
       line-height: 1.5;
     }
+    h6 {
+      padding: 0px;
+      font-size: 34px;
+      color: var(--clear);
+      font-weight: normal;
+      line-height: 1.5;
+      margin: 0;
+    }
 
     .center-content {
-      max-width: 100vh;
-      margin: 0 auto;
-      padding: 0 20px;
+      margin: 0 auto; /*CAMBIAR POR MARGIN 0 AUTO*/
+      /* padding: 0 20px; */
+      padding: 8px;
     }
 
-    /* @media (max-width: 1280px) {
+    /* For large screens */
+    @media (min-width: 1100px) {
       .center-content {
-        max-width: 1200px;
+        max-width: 1100px;
       }
     }
-        @media (max-width: 1920px) {
+
+    /* For medium screens */
+    @media (min-width: 768px) and (max-width: 1199px) {
       .center-content {
-        max-width: 1600px;
+        max-width: 900px;
       }
-    } */
+    }
+
+    /* For small screens */
+    @media (max-width: 767px) {
+      .center-content {
+        max-width: 100%;
+      }
+    }
 
     .links-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0px;
-      padding-bottom: 15px;
+      /* padding: 10px; */
+      padding: 8px;
       background: var(--bg);
       border-bottom: 1px solid var(--clear);
     }
@@ -101,6 +121,12 @@
       color: var(--acc-rojo);
     }
 
+    @media (max-width: 1199px) {
+      .hide-on-small {
+        display: none;
+      }
+    }
+
     .sticky-section {
       display: flex;
       justify-content: space-between;
@@ -109,7 +135,7 @@
       top: 0; /* se va a quedar pegadazo como chicle cuando se quede a 0px del margen de arriba */
       background-color: var(--bg);
       color: var(--clear);
-      padding: 10px;
+      padding: 8px;
       z-index: 100;
     }
 
@@ -157,70 +183,83 @@
       text-align: center;
       top: 47%;
       transform: translateY(-40%);
-      padding: 20px;
+      /* padding: 20px; */
       color: black;
       text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
     }
     /*---------------------------------*/
 
     .container-center {
+      width: 100%; /* 90% del ancho DE SU CONTENEDOR, no de la pantalla*/
       display: flex;
-      justify-content: center;  /* Center horizontally */
-      gap: 20px;                /* Space between the boxes */
-      
-      margin: auto;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;                /* espacio entre el logo y el about */
+
+      /* margin: auto; */
     }
 
     .item-in-container {
-      flex: 1;  
-      width: 150px;
+      /* border: red 2px solid; */
+      max-width: 100%;
       height: auto;
+    }
+
+    .about-text{
+      max-width: 50%;
     }
 
     .item-in-container img {
       width: 100%;
-      height: auto;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 930px) {
       .container-center {
         flex-direction: column;
-        align-items: center; /* optional: center items when stacked */
+        justify-content: center;
       }
-
       .item-in-container {
         width: 100%; /* full width when stacked */
+      }
+     .item-in-container img {
+        width: 100%;
+        justify-self: center;
+      }
+      .about-text{
+        justify-self: left;
+        max-width: 100%;
+      }
+      :root {
+        --carr-div: 2;
       }
     }
 
     ul {
-      list-style: none;        /* removes the bullet */
-      padding-left: 0;         /* optional: removes indent */
-      margin-left: 0;          /* optional: aligns flush */
+      list-style: none;        /*  c va el puntito del listado */
     }
 
     ul li {
-      margin-bottom: 8px;      /* optional: spacing between items */
-      display: flex;           /* aligns icon and text horizontally */
+      margin-bottom: 8px;
+      display: flex;           /* para poner el icono al costado del textito */
       align-items: center;
       line-height: 1.7;
       font-family: "Source Code Pro", sans-serif;
     }
 
     ul li i {
-      margin-right: 8px;       /* space between icon and text */
-      color: var(--acc-rojo);  /* optional: set icon color */
+      margin-right: 8px;       /* espacio entre el icono y el texto */
+      color: var(--acc-rojo);
     }
 
     /*---------------------------------*/
 
     .small-line {
-      width: 50px;            /* or any fixed width you want */
-      height: 3px;            /* or any fixed width you want */
+      width: 50px;
+      height: 3px;
       margin-top: 20px;
-      background-color: var(--acc-rojo);  /* or your desired color */
-      border-radius: 0px;      /* optional: rounded corners */
-      margin-left: 0;          /* aligns to the left */
+      background-color: var(--acc-rojo);
+      border-radius: 0px;
+      margin-left: 0;
     }
 
     /*---------------------------------*/
@@ -241,11 +280,12 @@
 
     .carousel-track a img {
       align-items: center;
-      width: 600px;
+      width: calc(100vw/var(--carr-div)/1.2);
+      padding-left: calc(100vw/var(--carr-div)/12);
+      padding-right: calc(100vw/var(--carr-div)/12);
       height: auto;
       object-fit: contain;
       background: var(--bg);
-      padding: 20px;
       flex-shrink: 0;
       opacity: 0.7;
       transition: opacity 0.3s ease;
@@ -260,44 +300,121 @@
         transform: translateX(0);
       }
       20%, 35% {
-        transform: translateX(-650px);
+        transform: translateX(calc(-100vw/var(--carr-div)*1));
       }
       40%, 55% {
-        transform: translateX(-1300px);
+        transform: translateX(calc(-100vw/var(--carr-div)*2));
       }
       60%, 75% {
-        transform: translateX(-1950px);
+        transform: translateX(calc(-100vw/var(--carr-div)*3));
       }
       80%, 95% {
-        transform: translateX(-2650px);
+        transform: translateX(calc(-100vw/var(--carr-div)*4));
       }
       100%, 100% {
-        transform: translateX(-3265px);
+        transform: translateX(calc(-100vw/var(--carr-div)*5));
       }
+    }
+
+    /*---------------------------------*/
+
+    .container-portfolio{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .container-portfolio a{
+      width: 25%;
+    }
+    @media (min-width: 900px) and (max-width: 1199px) {
+      .container-portfolio a{
+        width: 33.3333333%;
+      }
+    }
+    @media (min-width: 700px) and (max-width: 900px) {
+      .container-portfolio a{
+        width: 50%;
+      }
+    }
+    @media (max-width: 700px) {
+      .container-portfolio a{
+        width: 100%;
+      }
+    }
+
+    .image-overlay-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      overflow: hidden;
+      color: white;
+    }
+
+    .image-overlay-container img {
+
+      width: 100%;
+      opacity: 1;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      height: auto;
+    }
+
+    .image-overlay-container:hover img {
+      transform: scale(1.05);
+      opacity: 0.25;
+    }
+
+    .overlay-text {
+      position: absolute;
+      text-align: center;
+      padding-left: 10%;
+      padding-right: 10%;
+      transition: opacity 0.3s ease;
+      opacity:0;
+    }
+
+    .image-overlay-container:hover .overlay-text {
+      opacity: 1;
     }
 
   </style>
 </head>
 <body id="body">
   <div class="links-bar center-content">
-    <a href="mailto:aaronf.bianchi@gmail.com" class="code">aaronf.bianchi@gmail.com</a>
+    <a href="mailto:aaronf.bianchi@gmail.com" class="code">
+      <i style="color: var(--acc-rojo);" class="far fa-envelope"></i>&nbsp;aaronf.bianchi@gmail.com
+    </a>
     <div class="code links-r">
-      <a href="https://open.spotify.com/artist/7IsJv5qSfAQiIdee3wzaBJ">Spotify</a>
-      <a href="https://music.apple.com/pe/artist/aaron-f-bianchi-jupiter/1527705673">iTunes</a>
-      <a href="https://music.youtube.com/channel/UC2QFPZfv-Qnc24bvPqBK9NA">YT Music</a>
-      <a href="https://music.amazon.com/es-ar/artists/B08FWTYZMM/aaron-f-bianchi-jupiter">Amazon Music</a>
-      <a href="https://twitter.com/AaronFBianchi">Twitter</a>
+      <a href="https://open.spotify.com/artist/7IsJv5qSfAQiIdee3wzaBJ" target="_blank">
+        <i class="fab fa-spotify"></i><span class="hide-on-small">&nbsp;Spotify</span>
+      </a>
+      <a href="https://music.apple.com/pe/artist/aaron-f-bianchi-jupiter/1527705673" target="_blank">
+        <i class="fab fa-itunes"></i><span class="hide-on-small">&nbsp;iTunes</span>
+      </a>
+      <a href="https://music.youtube.com/channel/UC2QFPZfv-Qnc24bvPqBK9NA" target="_blank">
+        <i class="fab fa-youtube"></i><span class="hide-on-small">&nbsp;YT Music</span>
+      </a>
+      <a href="https://music.amazon.com/es-ar/artists/B08FWTYZMM/aaron-f-bianchi-jupiter" target="_blank">
+        <i class="fab fa-amazon"></i><span class="hide-on-small">&nbsp;Amazon Music</span>
+      </a>
+      <a href="https://twitter.com/AaronFBianchi" target="_blank">
+        <i class="fab fa-twitter"></i><span class="hide-on-small">&nbsp;Twitter</span>
+      </a>
     </div>
   </div>
 
-  <div class="sticky-section center-content">
-    <div><h1><a href="#body" style="color:var(--acc-azul); text-decoration:none;" class="chakra">Aaron F. Bianchi</a></h1></div>
-    <div class="code links-r">
-      <a href="#portfolio">Portfolio</a>
-      <a href="https://music.apple.com/pe/artist/aaron-f-bianchi-jupiter/1527705673">Testimonials</a>
-      <a href="https://music.youtube.com/channel/UC2QFPZfv-Qnc24bvPqBK9NA">Contact</a>
+  <div style="position: sticky; align-self: center; top: 0; background: var(--bg); z-index: 100;">
+    <div class="center-content sticky-section">
+      <h1><a href="#body" style="color:var(--acc-azul); text-decoration:none;" class="chakra">Aaron F. Bianchi</a></h1>
+      <div class="code links-r">
+        <a href="#demo-reel">Portfolio</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </div>
+
 
   <div class="video-background">
     <video autoplay muted loop playsinline>
@@ -306,84 +423,180 @@
     </video>
 
     <div class="video-overlay-text chakra">
-      <h2 style="color:var(--acc-azul); text-decoration:none;">Get your eardrums</h2>
-      <h2 style="color:var(--acc-rojo); text-decoration:underline;">READY!</h2>
+      <h4 style="color:var(--acc-azul); text-decoration:none;">Get your eardrums</h4>
+      <h4 style="color:var(--acc-rojo); text-decoration:underline;">READY!</h4>
     </div>
   </div>
 
-  <div style="margin-bottom: 50px;" class="container-center center-content">
-    <div class="item-in-container">
-      <img src="img/aaronicon.svg" alt="">
-    </div>
-    <div class="item-in-container chakra">
-      <h3>ABOUT</h3>
-      <h4>Hey there! I'm Aaron, a music creator specializing in intense electronic and metal genres. I enjoy doing many other genres too.</h4>
-      <h4>I started making music back when I was studying at uni and now I make a living composing for video games and streaming services.</h4>
-      <h4>I also enjoy coding small programs from time to time as well as trying new software to make my music.</h4>
-      <h4>These are some random facts about me:</h4>
-      <ul>
-        <li><i class="fas fa-check"></i> Loud music enjoyer.</li>
-        <li><i class="fas fa-check"></i> Big Half-Life and Doom nerd.</li>
-        <li><i class="fas fa-check"></i> I also speak Spanish.</li>
-        <li><i class="fas fa-check"></i> im_something_of_a_scientist_myself.jpg</li>
-      </ul>
+  <div class="center-content">
+    <div style="margin-bottom: 20px;" class="container-center">
+      <div class="item-in-container">
+        <img src="img/aaronicon2.svg" alt="">
+      </div>
+      <div class="item-in-container about-text chakra">
+        <h3>ABOUT</h3>
+        <div class="small-line"></div>
+        <h2>Hey there! I'm Aaron, a music creator specializing in intense electronic and metal genres. I enjoy doing many other genres too.</h2>
+        <h2>I started making music back when I was studying at uni and now I make a living composing for video games and streaming services.</h2>
+        <h2>I also enjoy coding small programs from time to time as well as trying new software to make my music.</h2>
+        <h2>These are some random facts about me:</h2>
+        <ul>
+          <li><i class="fas fa-check"></i> Loud music enjoyer.</li>
+          <li><i class="fas fa-check"></i> Big Half-Life and Doom nerd.</li>
+          <li><i class="fas fa-check"></i> I also speak Spanish.</li>
+          <li><i class="fas fa-check"></i> im_something_of_a_scientist_myself.jpg</li>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <div class="center-content" style="margin-top: 50px;">
+
+  <div class="center-content">
     <h3 class="chakra">PROJECTS</h3>
     <div class="small-line"></div>
     <h5 class="code">These are some projects I have worked on as a composer in recent years.</h5>
   </div>
 
-  <div class="carousel">
+  <div class="carousel" style="margin-top: 30px;">
     <div class="carousel-track">
+      <a href="https://www.moddb.com/mods/peer-review" target="_blank">
+        <img src="img/clients/peerreview.svg" alt="Slide 3">
+      </a>
       <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank">
         <img src="img/clients/gttod.svg" alt="Slide 1">
       </a>
       <a href="https://store.steampowered.com/app/1444480/Turing_Complete/" target="_blank">
         <img src="img/clients/turing.svg" alt="Slide 2">
       </a>
-      <a href="https://www.moddb.com/mods/peer-review" target="_blank">
-        <img style="margin-right: 15px;"src="img/clients/peerreview.svg" alt="Slide 3">
-      </a>
       <a href="https://aaron-f-bianchi.itch.io/actual-3d-sudoku" target="_blank">
-        <img style="margin-left: 50px;" src="img/clients/3dsudoku.svg" alt="Slide 4">
+        <img src="img/clients/3dsudoku.svg" alt="Slide 4">
       </a>
       <a href="https://www.moddb.com/mods/black-mesa-hazard-course" target="_blank">
         <img src="img/clients/hazardcourse.svg" alt="Slide 5">
       </a>
+      <a href="https://www.moddb.com/mods/peer-review" target="_blank">
+        <img src="img/clients/peerreview.svg" alt="Slide 3">
+      </a>
       <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank">
         <img src="img/clients/gttod.svg" alt="Slide 1">
       </a>
       <a href="https://store.steampowered.com/app/1444480/Turing_Complete/" target="_blank">
         <img src="img/clients/turing.svg" alt="Slide 2">
       </a>
-      <a href="https://www.moddb.com/mods/peer-review" target="_blank">
-        <img style="margin-right: 15px;"src="img/clients/peerreview.svg" alt="Slide 3">
-      </a>
     </div>
   </div>
 
-  <div id="portfolio" class="center-content" style="margin-top: 50px;">
+  <div id="demo-reel" class="center-content" style="margin-top: 30px;">
     <h3 class="chakra">DEMO REEL</h3>
     <div class="small-line"></div>
-    <div style="margin-top: 30px; " id="video-container" class="vid-port">
-      <iframe style="display: block; margin: 0 auto;" width="960" height="540" src="https://www.youtube.com/embed/EtrEmkpgJVI?si=RlN7RN6GjlCTG65g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+  </div>
+  <div style="margin-top: 30px; justify-self: center; " id="video-container" class="vid-port">
+    <iframe style="display: flex; margin: 0 auto;" width="960" height="540" src="https://www.youtube.com/embed/EtrEmkpgJVI?si=RlN7RN6GjlCTG65g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+
+  <section id="portfolio">
+    <div class="center-content" style="margin-top: 0px;">
+      <h3 class="chakra">PORTFOLIO</h3>
+      <div class="small-line"></div>
+      <h5 class="code">Take a listen to some of my work!</h5>
     </div>
-  </div>
 
-  <div class="center-content" style="margin-top: 50px;">
-    <h3 class="chakra">PORTFOLIO</h3>
-    <div class="small-line"></div>
-    <h5 class="code">Take a listen to some of my work!</h5>
-  </div>
+      <div class="container-portfolio">
+        <a href="https://www.youtube.com/watch?v=EmRZB66sPGE&list=OLAK5uy_ndcqZ2KHBwRYJ4wKX1FEViqc8H3xyu39k&index=1" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/nailgun.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Nailgun"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Aggressive cyberpunky track with heavy guitars.</h4>
+          </div>
+        </a>
+        <a href="https://youtu.be/_WIWmTnjwXA?si=PqB2zIFBXjohgAyq" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/apexpredator.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Apex Predator"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Violent synthy metal with extream vocals.</h4>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=pX1XYCxPHnc&list=OLAK5uy_mvGYt6PijqTCtfdgmxxhfOO1OLRV53AF4&index=1" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/fate.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Fate"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Multitrack final boss music for fast-paced FPS.</h4>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_k2MuK4SjHHoPSDkFqAuyasmfUzgm7GGBw" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/60fps.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"60 Fatalities Per Second"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Heavy doom-y tracks intended for multiplayer FPS.</h4>
+          </div>
+        </a>
+        <a href="https://youtu.be/QYHU8iI6G-k?si=lcUtZbh8W_wjjwSe" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/smashcorps.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Smash the Corps"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Made for the GrowlFM contest for the Phantom Liberty DLC.</h4>
+          </div>
+        </a>
+        <a href="https://youtu.be/DdDhmsdEJMQ?si=gyQsGzEFa_lLWHFc" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/inquisition.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Inquisition Core"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Intense breakcore with acoustic and electric guitars.</h4>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=5bhWqtECmKc&list=OLAK5uy_kTFQsvSBVNP_AVzhSKu8qpGgCcUT-dOPw" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/psychehoarder.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Psyche Hoarder"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Two thirds of cyberpunk and one third of metal.</h4>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=Ht8B7F0E4qo&list=OLAK5uy_lQ7-VCdqnJNexgi0prsM9Dkg1KI-DkLoo&index=3" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/gttod.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"GTTOD: Primary Act 1 OST"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Mostly synthwave with small parts of other genres.</h4>
+          </div>
+        </a>
+        <a href="https://youtu.be/e_BlljPdKJk?si=-Ph4G3RJkKEu5DFZ" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/slaying.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Slaying With Portals"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>If Portal was faster, distorted and louder.</h4>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=eUql81sMICY&list=OLAK5uy_mdg9CgX45VsfK7tW8lJbWp0v9cIq8UEwQ" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/tdxphonk.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"TDX Phonk"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>If extreme metal screams were used for phonk.</h4>
+          </div>
+        </a>
+        <a href="https://open.spotify.com/album/5VPMw9vg9ybpoFu58HMBQ4" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/peerreview.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Peer Review, Vol. 1"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Soundtrack for the Half-Life: Decay remake.</h4>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=J9LRROHvf2E&list=PLK3XdWYpU2oww9ZoqTjdeSmML7tBvRPqP" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/turingcomplete.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Superscalar Symphony"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Chill synthwave OST for a computery puzzle game.</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section><!-- #portfolio -->
 
-  <div >
-    <p>dame el p0to</p>
-    <p style="height: 20000px;">o te rebiento</p>
-    <p>xd</p>
-  </div>
+  <section id="testimonials">
+    <div class="center-content" style="margin-top: 50px;">
+      <h3 class="chakra">TESTIMONIALS</h3>
+      <div class="small-line"></div>
+    </div>
+  </section><!-- #testimonials -->
 
 </body>
 </html>
