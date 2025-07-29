@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta property="og:title" content="Aaron F. Bianchi" />
+  <meta property="og:description" content="Eardrum-breaking music composer." />
+  <meta property="og:image" content="img/img-meta.png" />
+
   <title>Aaron F. Bianchi</title>
 
   <!-- Google Fonts -->
@@ -23,7 +27,8 @@
       --acc-rojo: #ff004c;
       --acc-azul: #00d0ff;
       --bg:       #000;
-      --clear:     #fff;
+      --clear:    #fff;
+      --gris:     #999;
       --carr-div: 3;
     }
 
@@ -378,6 +383,78 @@
       opacity: 1;
     }
 
+    /*---------------------------------*/
+
+    .testimonial-item{
+      margin-top: 50px;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .testimonial-img-link{
+      margin: 10px;
+      width: 90px;
+      height: 90px;
+    }
+
+    .testimonial-img{
+      object-fit: cover;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+    }
+
+    .testimonial-text{
+      font-style: italic;
+      text-align: center;
+      width: 80%;
+    }
+
+    .testimonial-name{
+      font-weight: bold;
+      font-size: 18px;
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      align-content: center;
+      align-items: center;
+      margin: 3px;
+    }
+
+    .testimonial-name p{
+      margin: 0px;
+    }
+
+    .testimonial-name a{
+      color: var(--acc-rojo);
+      transition: color 0.3s ease;
+    }
+
+    .testimonial-name a:hover{
+      color: var(--acc-azul);
+      transition: color 0.3s ease;
+    }
+
+    .testimonial-description{
+      font-size: 18px;
+      font-weight: normal;
+      margin: 0px;
+      color: var(--gris);
+    }
+
+    .testimonial-description a{
+      font-weight: bold;
+      color: var(--gris);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .testimonial-description a:hover{
+      color: var(--acc-rojo);
+    }
+
   </style>
 </head>
 <body id="body">
@@ -595,7 +672,120 @@
     <div class="center-content" style="margin-top: 50px;">
       <h3 class="chakra">TESTIMONIALS</h3>
       <div class="small-line"></div>
+
+      <div class="testimonial-item">
+        <p class="code testimonial-text">
+          "Aaron is a talented, timely, and passionate composer who I could not possibly recommend more. He was able to come onto a project late in its development and elevate its soundtrack to new heights I did not even think were possible. He is communicative, driven, open to experimentation as well as on-the-fly adjustments, and overall has been a joy to work with. You won't find a composer better than him."
+        </p>
+        <a class="testimonial-img-link"href="https://www.youtube.com/@lowhangingnuts" target="_blank"><img src="img/andrew.jpg" class="testimonial-img" alt=""></a>
+        <div class="chakra testimonial-name">
+          <p>Andrew Smith |</p>
+          <a href="https://www.youtube.com/@lowhangingnuts" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://x.com/LowDanglingNuts" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+        <p class="chakra testimonial-description">a.k.a. low_hanging_nuts, Developer of <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank" class="a simple">GTTOD</a></p>
+      </div>
+
+      <div class="testimonial-item">
+        <p class="code testimonial-text">
+          "Aaron is a very dedicated composer capable of adapting to any style. In addition to being fast, he is always surprising with new ideas for the future of any given project."
+        </p>
+        <a class="testimonial-img-link"href="https://www.youtube.com/@lowhangingnuts" target="_blank"><img src="img/andrew.jpg" class="testimonial-img" alt=""></a>
+        <div class="chakra testimonial-name">
+          <p>Andrew Smith |</p>
+          <a href="https://www.youtube.com/@lowhangingnuts" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://x.com/LowDanglingNuts" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+        <p class="chakra testimonial-description">a.k.a. low_hanging_nuts, Developer of <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank" class="a simple">GTTOD</a></p>
+      </div>
+      
+      <div class="testimonial-item">
+        <p class="code testimonial-text">
+          "Aaron is talented and easy to work with. He cares about his work and delivers high quality music. I can highly recommend him."
+        </p>
+        <a class="testimonial-img-link"href="https://www.youtube.com/@lowhangingnuts" target="_blank"><img src="img/andrew.jpg" class="testimonial-img" alt=""></a>
+        <div class="chakra testimonial-name">
+          <p>Andrew Smith |</p>
+          <a href="https://www.youtube.com/@lowhangingnuts" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://x.com/LowDanglingNuts" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+        <p class="chakra testimonial-description">a.k.a. low_hanging_nuts, Developer of <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank" class="a simple">GTTOD</a></p>
+      </div>
+
+      <div class="testimonial-item">
+        <p class="code testimonial-text">
+          "Aaron is a highly creative and dedicated composer whose strong passion for music is reflected in his work. He’s reliable and consistent, and working with him is precise, yet always enjoyable and fun. You can always count on Aaron to have your back on any project."
+        </p>
+        <a class="testimonial-img-link"href="https://www.youtube.com/@lowhangingnuts" target="_blank"><img src="img/andrew.jpg" class="testimonial-img" alt=""></a>
+        <div class="chakra testimonial-name">
+          <p>Andrew Smith |</p>
+          <a href="https://www.youtube.com/@lowhangingnuts" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://x.com/LowDanglingNuts" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+        <p class="chakra testimonial-description">a.k.a. low_hanging_nuts, Developer of <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank" class="a simple">GTTOD</a></p>
+      </div>
+
+      <div class="testimonial-item">
+        <p class="code testimonial-text">
+          "When I found Aaron on Youtube, he was a quite small artist that was just starting to grow but I immediately noticed the quality of his songs and remixes. Working with him was a blast, totally uncomplicated, quick and super fun. You can always expect high quality music from him."
+        </p>
+        <a class="testimonial-img-link"href="https://www.youtube.com/@lowhangingnuts" target="_blank"><img src="img/andrew.jpg" class="testimonial-img" alt=""></a>
+        <div class="chakra testimonial-name">
+          <p>Andrew Smith |</p>
+          <a href="https://www.youtube.com/@lowhangingnuts" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://x.com/LowDanglingNuts" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+        <p class="chakra testimonial-description">a.k.a. low_hanging_nuts, Developer of <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank" class="a simple">GTTOD</a></p>
+      </div>
+
+      <div class="testimonial-item">
+        <p class="code testimonial-text">
+          "Aaron took all of my ideas and made them bigger and better. His taste is impeccable, and is incredibly easy to work with."
+        </p>
+        <a class="testimonial-img-link"href="https://www.youtube.com/@lowhangingnuts" target="_blank"><img src="img/andrew.jpg" class="testimonial-img" alt=""></a>
+        <div class="chakra testimonial-name">
+          <p>Andrew Smith |</p>
+          <a href="https://www.youtube.com/@lowhangingnuts" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://x.com/LowDanglingNuts" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+        <p class="chakra testimonial-description">a.k.a. low_hanging_nuts, Developer of <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank" class="a simple">GTTOD</a></p>
+      </div>
+
+      <div class="testimonial-item">
+        <p class="code testimonial-text">
+          "It has been an utmost pleasure working with Aaron! He is extremely talented and delivers high quality work in a very reasonable time. There are few <!--I've worked with that are -->as dedicated as Aaron is to his craft and it makes everything operate smoothly."
+        </p>
+        <a class="testimonial-img-link"href="https://www.youtube.com/@lowhangingnuts" target="_blank"><img src="img/andrew.jpg" class="testimonial-img" alt=""></a>
+        <div class="chakra testimonial-name">
+          <p>Andrew Smith |</p>
+          <a href="https://www.youtube.com/@lowhangingnuts" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://x.com/LowDanglingNuts" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+        <p class="chakra testimonial-description">a.k.a. low_hanging_nuts, Developer of <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank" class="a simple">GTTOD</a></p>
+      </div>
+
+      <div class="testimonial-item">
+        <p class="code testimonial-text">
+          "Aaron took all of my ideas and made them bigger and better. His taste is impeccable, and is incredibly easy to work with."
+        </p>
+        <a class="testimonial-img-link"href="https://www.youtube.com/@lowhangingnuts" target="_blank"><img src="img/andrew.jpg" class="testimonial-img" alt=""></a>
+        <div class="chakra testimonial-name">
+          <p>Andrew Smith |</p>
+          <a href="https://www.youtube.com/@lowhangingnuts" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://x.com/LowDanglingNuts" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+        <p class="chakra testimonial-description">a.k.a. low_hanging_nuts, Developer of <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank" class="a simple">GTTOD</a></p>
+      </div>
     </div>
+
   </section><!-- #testimonials -->
 
 </body>
