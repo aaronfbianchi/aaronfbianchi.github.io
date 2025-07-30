@@ -1,772 +1,1226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta property="og:title" content="Aaron F. Bianchi" />
+  <meta property="og:description" content="Eardrum-breaking music composer." />
+  <meta property="og:image" content="img/img-meta.png" />
+
   <title>Aaron F. Bianchi</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
-  
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:url" content="https://aaronfbianchi.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Aaron F. Bianchi">
-  <meta property="og:description" content="Eardrum-breaking music composer">
-  <meta property="og:image" content="https://aaronfbianchi.github.io/img/preview.webp">
-  <meta property="og:image:width" content="1280">
-  <meta property="og:image:height" content="630">
-
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="aaronfbianchi.github.io">
-  <meta property="twitter:url" content="https://aaronfbianchi.github.io/">
-  <meta name="twitter:title" content="Aaron F. Bianchi">
-  <meta name="twitter:description" content="Eardrum-breaking music composer">
-  <meta name="twitter:image" content="https://aaronfbianchi.github.io/img/preview.webp">
-
-  <!-- Favicons -->
-  <link href="img/aaronicon.png" rel="icon">
-  <link href="img/aaronicon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
-
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-	
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-</head>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    .chakra {
+      font-family: "Chakra Petch", sans-serif;
+    }
+
+    .code {
+      font-family: "Source Code Pro", sans-serif;
+    }
+
+    :root {
+      --acc-rojo: #ff004c;
+      --acc-azul: #00d0ff;
+      --bg:       #000;
+      --clear:    #fff;
+      --gris:     #999;
+      --text-dark:#000;
+      --carr-div: 3;
+      --strm-div: 6;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 50px;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--clear);
+      margin: 0px;
+    }
+
+    h1 {
+      font-size: 44px;
+      margin: 0;
+    }
+    h4 {
+      font-size: 52px;
+      margin: 0;
+    }
+    h3 {
+      font-size: 36px;
+      color: var(--acc-azul);
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 18px;
+      color: var(--clear);
+      font-weight: lighter;
+      font-style: italic;
+      line-height: 1.5;
+    }
+    h5 {
+      font-size: 16px;
+      color: var(--clear);
+      font-weight: normal;
+      line-height: 1.5;
+    }
+    h6 {
+      padding: 0px;
+      font-size: 34px;
+      color: var(--clear);
+      font-weight: normal;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .center-content {
+      margin: 0 auto; /*CAMBIAR POR MARGIN 0 AUTO*/
+      /* padding: 0 20px; */
+      padding: 8px;
+    }
+
+    /* For large screens */
+    @media (min-width: 1100px) {
+      .center-content {
+        max-width: 1100px;
+      }
+    }
+
+    /* For medium screens */
+    @media (min-width: 768px) and (max-width: 1199px) {
+      .center-content {
+        max-width: 900px;
+      }
+    }
+
+    /* For small screens */
+    @media (max-width: 767px) {
+      .center-content {
+        max-width: 100%;
+      }
+    }
+
+    .fixed-button {
+      position: fixed;
+      bottom: 20px; 
+      right: 20px; 
+      width: 50px;
+      height: 40px;
+      padding: 0px;
+      padding-top: 10px;
+      border-radius: 5px;
+      background-color: var(--acc-rojo);
+      font-weight: bold;
+      font-size: 30px;
+      text-decoration: none;
+      color: var(--bg);
+      z-index: 1000;
+      text-align: center;
+      opacity: 0.8;
+      transition: background-color 0.3s ease;
+    }
+
+    .fixed-button:hover {
+      background-color: var(--acc-azul);
+    }
+
+    .links-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* padding: 10px; */
+      padding: 8px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--clear);
+    }
+
+    .links-bar a {
+      color: var(--clear);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .links-bar a:hover {
+      color: var(--acc-rojo);
+    }
+
+    @media (max-width: 1199px) {
+      .hide-on-small {
+        display: none;
+      }
+    }
+
+    .sticky-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0; /* se va a quedar pegadazo como chicle cuando se quede a 0px del margen de arriba */
+      background-color: var(--bg);
+      color: var(--clear);
+      padding: 8px;
+      z-index: 100;
+    }
+
+    .links-r a {
+      padding-left: 20px;
+      color: var(--clear);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .links-r a:hover {
+      color: var(--acc-rojo);
+    }
+
+    .sticky-section a {
+      font-weight: bold;
+    }
+
+    /*---------------------------------*/
+    .video-background {
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      overflow: hidden;
+    }
+
+    .video-background video {
+      position: absolute;
+      opacity: 0.8;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 60%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    .video-overlay-text {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      top: 47%;
+      transform: translateY(-40%);
+      /* padding: 20px; */
+      color: black;
+      text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .buttons{
+      margin-top:40px;
+      display:flex;
+      justify-content: center;
+      gap:30px;
+    }
+
+    .rounded-button {
+      font-size: 20px;
+      display: inline-block;
+      padding:16px 32px;
+      border-radius: 5px;
+      color: var(--clear);
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .button-demo{
+      background-color: var(--acc-azul);
+      border: 3px solid var(--acc-azul);
+    }
+
+    .button-contact{
+      background-color: var(--acc-rojo);
+      border: 3px solid var(--acc-rojo);
+    }
+
+    .button-demo:hover{
+      background-color: transparent;
+      color: var(--acc-azul);
+    }
+
+    .button-contact:hover{
+      background-color: transparent;
+      color: var(--acc-rojo);
+    }
+
+    /*---------------------------------*/
+
+    .container-center {
+      width: 100%; /* 90% del ancho DE SU CONTENEDOR, no de la pantalla*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;                /* espacio entre el logo y el about */
+
+      /* margin: auto; */
+    }
+
+    .item-in-container {
+      /* border: red 2px solid; */
+      max-width: 100%;
+      height: auto;
+    }
+
+    .about-text{
+      max-width: 50%;
+    }
+
+    .item-in-container img {
+      width: 100%;
+    }
+
+    @media (max-width: 930px) {
+      .container-center {
+        flex-direction: column;
+        justify-content: center;
+      }
+      .item-in-container {
+        width: 100%; /* full width when stacked */
+      }
+     .item-in-container img {
+        width: 100%;
+        justify-self: center;
+      }
+      .about-text{
+        justify-self: left;
+        max-width: 100%;
+      }
+      :root {
+        --carr-div: 2;
+      }
+    }
+
+    ul {
+      list-style: none;        /*  c va el puntito del listado */
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      display: flex;           /* para poner el icono al costado del textito */
+      align-items: center;
+      line-height: 1.7;
+      font-family: "Source Code Pro", sans-serif;
+    }
+
+    ul li i {
+      margin-right: 8px;       /* espacio entre el icono y el texto */
+      color: var(--acc-rojo);
+    }
+
+    /*---------------------------------*/
+
+    .small-line {
+      width: 50px;
+      height: 3px;
+      margin-top: 20px;
+      background-color: var(--acc-rojo);
+      border-radius: 0px;
+      margin-left: 0;
+    }
+
+    /*---------------------------------*/
+
+    .carousel {
+      width: 99vw;
+      overflow: hidden;
+      margin: auto;
+      border-top: 4px solid var(--bg);
+      border-bottom: 4px solid var(--bg);
+    }
+
+    .carousel-track {
+      align-items: center;
+      display: flex;
+      animation: slide 10s infinite;
+    }
+
+    .carousel-track a img {
+      align-items: center;
+      width: calc(100vw/var(--carr-div)/1.2);
+      padding-left: calc(100vw/var(--carr-div)/12);
+      padding-right: calc(100vw/var(--carr-div)/12);
+      height: auto;
+      object-fit: contain;
+      background: var(--bg);
+      flex-shrink: 0;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
+    .carousel-track a img:hover {
+      opacity: 1;
+    }
+
+    @keyframes slide {
+      0%, 15% {
+        transform: translateX(0);
+      }
+      20%, 35% {
+        transform: translateX(calc(-100vw/var(--carr-div)*1));
+      }
+      40%, 55% {
+        transform: translateX(calc(-100vw/var(--carr-div)*2));
+      }
+      60%, 75% {
+        transform: translateX(calc(-100vw/var(--carr-div)*3));
+      }
+      80%, 95% {
+        transform: translateX(calc(-100vw/var(--carr-div)*4));
+      }
+      100%, 100% {
+        transform: translateX(calc(-100vw/var(--carr-div)*5));
+      }
+    }
+
+    /*---------------------------------*/
+
+    .container-portfolio{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .container-portfolio a{
+      width: 25%;
+    }
+    @media (min-width: 900px) and (max-width: 1199px) {
+      .container-portfolio a{
+        width: 33.3333333%;
+      }
+    }
+    @media (min-width: 700px) and (max-width: 900px) {
+      .container-portfolio a{
+        width: 50%;
+      }
+    }
+    @media (max-width: 700px) {
+      .container-portfolio a{
+        width: 100%;
+      }
+    }
+
+    .image-overlay-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      overflow: hidden;
+      color: white;
+    }
+
+    .image-overlay-container img {
+
+      width: 100%;
+      opacity: 1;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      height: auto;
+    }
+
+    .image-overlay-container:hover img {
+      transform: scale(1.05);
+      opacity: 0.25;
+    }
+
+    .overlay-text {
+      position: absolute;
+      text-align: center;
+      padding-left: 10%;
+      padding-right: 10%;
+      transition: opacity 0.3s ease;
+      opacity:0;
+    }
+
+    .image-overlay-container:hover .overlay-text {
+      opacity: 1;
+    }
+
+    /*---------------------------------*/
+
+    .testimonial-item{
+      margin-top: 50px;
+      margin-bottom: 100px;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .testimonial-img-link{
+      margin: 10px;
+      width: 90px;
+      height: 90px;
+    }
+
+    .testimonial-img{
+      object-fit: cover;
+      border-radius: 30%;
+      width: 100%;
+      height: 100%;
+    }
+
+    .testimonial-text{
+      font-style: italic;
+      text-align: center;
+      width: 80%;
+    }
+
+    .testimonial-name{
+      font-weight: bold;
+      font-size: 18px;
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      align-content: center;
+      align-items: center;
+      margin: 3px;
+    }
+
+    .testimonial-name p{
+      margin: 0px;
+    }
+
+    .testimonial-name a{
+      color: var(--acc-rojo);
+      transition: color 0.3s ease;
+    }
+
+    .testimonial-name a:hover{
+      color: var(--acc-azul);
+      transition: color 0.3s ease;
+    }
+
+    .testimonial-description{
+      font-size: 18px;
+      font-weight: normal;
+      margin: 0px;
+      color: var(--gris);
+    }
+
+    .testimonial-description a{
+      font-weight: bold;
+      color: var(--gris);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .testimonial-description a:hover{
+      color: var(--acc-rojo);
+    }
+
+    .dual-testimonial{
+      display:flex;
+      flex-direction: row;
+      align-items: space-between;
+    }
+
+    @media (max-width: 930px) {
+      .dual-testimonial{
+        flex-direction: column;
+      }
+    }
+
+    /*---------------------------------*/
+
+    .streaming-container{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    
+    .streaming-item a {
+      text-decoration: none;
+      transform: translateY(0);
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .streaming-item a:hover {
+      transform: translateY(-10px);
+    }
+
+    .streaming-item a img{
+      width: 100%;
+      height: auto;
+    }
+
+    .streaming-item a p{
+      font-weight: bold;
+      font-size: 20px;
+      color: var(--clear);
+      text-decoration: none;
+      text-align: center;
+    }
+
+    @media (min-width: 900px) and (max-width: 1199px) {
+      :root {
+        --strm-div: 3;
+      }
+    }
+    @media (min-width: 700px) and (max-width: 900px) {
+      :root {
+        --strm-div: 2;
+      }
+    }
+
+    .streaming-item{
+      width: calc(100%/var(--strm-div)*0.7);
+      margin:calc(100%/var(--strm-div)*0.15);
+    }
+
+    @media (max-width: 700px) {
+      :root {
+        --strm-div: 1;
+      }
+      .streaming-item a p{
+        font-size: 30px;
+      }
+      .streaming-item{
+        width: calc(100%/var(--strm-div)*0.5);
+        margin:calc(100%/var(--strm-div)*0.05);
+      }
+    }
+
+    /*---------------------------------*/
+
+    .side-container{
+      display: flex;
+      flex-direction: row;
+      justify-content:space-evenly;
+      align-items:center;
+    }
+
+    .side-item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+    }
+
+    .side-item a img{
+      width: 100%;
+    }
+
+    .rect-side{
+      background-color: var(--acc-rojo);
+      width: 100%;
+      height: 40%;
+      padding: 5px;
+      text-align: center;
+      color: var(--text-dark);
+    }
+
+    .side-item-title{
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .side-item-desc{
+      font-size: 16px;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .side-item-links{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content:center;
+      gap: 14px;
+      height: 48px;
+    }
+
+    .side-item-links a i{
+      color:var(--text-dark);
+      vertical-align: middle;
+      height: 100%;
+    }
+    .side-item-links img{
+      filter: brightness(0);
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 1199px) {
+      .side-container{
+        gap: 50px;
+      }
+      .side-item{
+        width: 40%;
+      }
+    }
+    @media (max-width: 930px) {
+      .side-container{
+        flex-direction: column;
+        gap: 50px;
+      }
+      .side-item{
+        width: 60%;
+      }
+    }
+
+    /*---------------------------------*/
+
+    .contact-container{
+      display:flex;
+      flex-direction: row;
+      justify-content:space-evenly;
+      align-items:center;
+    }
+
+    .contact-item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact-item div{
+      width:48px;
+      height: 48px;
+    }
+
+    .contact-img-box{
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-icon{
+      width: 48px;
+    }
+
+    .contact-name{
+      color: var(--clear);
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .contact-contact{
+      color: var(--gris);
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    .contact-item a{
+      transition: color 0.3s ease;
+    }
+
+    .contact-item a:hover{
+      color:var(--acc-rojo);
+    }
+
+    /*---------------------------------*/
+
+    .copyright{
+      margin:100px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .video-container{
+      display:flex;
+      align-items: center;
+    }
+
+    .footer{
+      position:absolute;
+      width: 100%;
+      transform: translateY(-50%);
+      z-index: -100;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+  </style>
+</head>
 <body id="body">
 
-  <!--==========================
-    Top Bar
-  ============================-->
-  <section id="topbar" class="d-none d-lg-block">
-    <div class="container clearfix">
-      <div class="contact-info float-left">
-        <i class="fa fa-envelope-o"></i> <a href="mailto:aaronf.bianchi@gmail.com">aaronf.bianchi@gmail.com</a>
-        <!--i class="fa fa-phone"></i> +1 5589 55488 55-->
+  <a href="#body" class="chakra fixed-button">^</a>
+
+  <div class="links-bar center-content">
+    <a href="mailto:aaronf.bianchi@gmail.com" class="code">
+      <i style="color: var(--acc-rojo);" class="far fa-envelope"></i>&nbsp;aaronf.bianchi@gmail.com
+    </a>
+    <div class="code links-r">
+      <a href="https://open.spotify.com/artist/7IsJv5qSfAQiIdee3wzaBJ" target="_blank">
+        <i class="fab fa-spotify"></i><span class="hide-on-small">&nbsp;Spotify</span>
+      </a>
+      <a href="https://music.apple.com/pe/artist/aaron-f-bianchi-jupiter/1527705673" target="_blank">
+        <i class="fab fa-itunes"></i><span class="hide-on-small">&nbsp;iTunes</span>
+      </a>
+      <a href="https://music.youtube.com/channel/UC2QFPZfv-Qnc24bvPqBK9NA" target="_blank">
+        <i class="fab fa-youtube"></i><span class="hide-on-small">&nbsp;YT Music</span>
+      </a>
+      <a href="https://music.amazon.com/es-ar/artists/B08FWTYZMM/aaron-f-bianchi-jupiter" target="_blank">
+        <i class="fab fa-amazon"></i><span class="hide-on-small">&nbsp;Amazon Music</span>
+      </a>
+      <a href="https://twitter.com/AaronFBianchi" target="_blank">
+        <i class="fab fa-twitter"></i><span class="hide-on-small">&nbsp;Twitter</span>
+      </a>
+    </div>
+  </div>
+
+  <div style="position: sticky; align-self: center; top: 0; background: var(--bg); z-index: 100;">
+    <div class="center-content sticky-section">
+      <h1><a href="#body" style="color:var(--acc-azul); text-decoration:none;" class="chakra">Aaron F. Bianchi</a></h1>
+      <div class="code links-r">
+        <a href="#demo-reel">Portfolio</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
       </div>
-      <div class="social-links float-right">
-        <a href="https://open.spotify.com/artist/7IsJv5qSfAQiIdee3wzaBJ" target="_blank">
-			<span class="hide-on-small">&nbsp;Spotify</span> <i class="fa fa-spotify"></i>
-		</a>
-        <a href="https://music.apple.com/pe/artist/aaron-f-bianchi-jupiter/1527705673" target="_blank">
-			<span class="hide-on-small">&nbsp;iTunes</span> <i class="fa fa-music"></i>
-		</a>
-        <a href="https://music.youtube.com/channel/UC2QFPZfv-Qnc24bvPqBK9NA" target="_blank">
-			<span class="hide-on-small">&nbsp;YT Music</span> <i class="fa fa-youtube-play"></i>
-		</a>
-		<a href="https://music.amazon.com/es-ar/artists/B08FWTYZMM/aaron-f-bianchi-jupiter" target="_blank">
-			<span class="hide-on-small">&nbsp;Amazon Music</span> <i class="fa fa-amazon"></i>
-		</a>
-		<a href="https://twitter.com/AaronFBianchi" target="_blank">
-			<span class="hide-on-small">&nbsp;Twitter</span> <i class="fa fa-twitter"></i>
-		</a>
-        <!--a href="#" class="instagram">
-			<i class="fa fa-instagram"></i>
-		</a>
-        <a href="#" class="google-plus">
-			<i class="fa fa-google-plus"></i>
-		</a>
-        <a href="#" class="linkedin">
-			<i class="fa fa-linkedin"></i>
-		</a-->
+    </div>
+  </div>
+
+
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="img/demon_osc_3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="video-overlay-text chakra">
+      <h4 style="color:var(--acc-azul); text-decoration:none;">Get your eardrums</h4>
+      <h4 style="color:var(--acc-rojo); text-decoration:underline;">READY!</h4>
+      <div class="buttons">
+        <a href="#demo-reel" class="rounded-button button-demo">Portfolio</a>
+        <a href="#contact" class="rounded-button button-contact">Contact Me</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="center-content">
+    <div style="margin-bottom: 20px;" class="container-center">
+      <div class="item-in-container">
+        <img src="img/aaronicon2.svg" alt="">
+      </div>
+      <div class="item-in-container about-text chakra">
+        <h3>ABOUT</h3>
+        <div style="margin-top:25px;margin-bottom:25px;" class="small-line"></div>
+        <h2>Hey there! I'm Aaron, a music creator specializing in intense electronic and metal genres. I enjoy doing many other genres too.</h2>
+        <h2>I started making music back when I was studying at uni and now I make a living composing for video games and streaming services.</h2>
+        <h2>I also enjoy coding small programs from time to time as well as trying new software to make my music.</h2>
+        <h2>These are some random facts about me:</h2>
+        <ul>
+          <li><i class="fas fa-check"></i> Loud music enjoyer.</li>
+          <li><i class="fas fa-check"></i> Big Half-Life and Doom nerd.</li>
+          <li><i class="fas fa-check"></i> I also speak Spanish.</li>
+          <li><i class="fas fa-check"></i> im_something_of_a_scientist_myself.jpg</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="center-content">
+    <h3 class="chakra">PROJECTS</h3>
+    <div class="small-line"></div>
+    <h5 class="code">These are some projects I have worked on as a composer in recent years.</h5>
+  </div>
+
+  <div class="carousel" style="margin-top: 30px;">
+    <div class="carousel-track">
+      <a href="https://www.moddb.com/mods/peer-review" target="_blank">
+        <img src="img/clients/peerreview.svg" alt="Slide 3">
+      </a>
+      <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank">
+        <img src="img/clients/gttod.svg" alt="Slide 1">
+      </a>
+      <a href="https://store.steampowered.com/app/1444480/Turing_Complete/" target="_blank">
+        <img src="img/clients/turing.svg" alt="Slide 2">
+      </a>
+      <a href="https://aaron-f-bianchi.itch.io/actual-3d-sudoku" target="_blank">
+        <img src="img/clients/3dsudoku.svg" alt="Slide 4">
+      </a>
+      <a href="https://www.moddb.com/mods/black-mesa-hazard-course" target="_blank">
+        <img src="img/clients/hazardcourse.svg" alt="Slide 5">
+      </a>
+      <a href="https://www.moddb.com/mods/peer-review" target="_blank">
+        <img src="img/clients/peerreview.svg" alt="Slide 3">
+      </a>
+      <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank">
+        <img src="img/clients/gttod.svg" alt="Slide 1">
+      </a>
+      <a href="https://store.steampowered.com/app/1444480/Turing_Complete/" target="_blank">
+        <img src="img/clients/turing.svg" alt="Slide 2">
+      </a>
+    </div>
+  </div>
+
+  <section id="demo-reel">
+    <div class="center-content" style="margin-top: 30px;">
+      <h3 class="chakra">DEMO REEL</h3>
+      <div class="small-line"></div>
+    </div>
+    <div style="margin-top: 30px; justify-self: center; " id="video-container" class="vid-port">
+      <iframe style="display: flex; margin: 0 auto;" width="960" height="540" src="https://www.youtube.com/embed/EtrEmkpgJVI?si=RlN7RN6GjlCTG65g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </section>
+
+
+  <section id="portfolio">
+    <div class="center-content" style="margin-top: 0px;">
+      <h3 class="chakra">PORTFOLIO</h3>
+      <div class="small-line"></div>
+      <h5 class="code">Take a listen to some of my work!</h5>
+    </div>
+
+      <div class="container-portfolio">
+        <a href="https://www.youtube.com/watch?v=EmRZB66sPGE&list=OLAK5uy_ndcqZ2KHBwRYJ4wKX1FEViqc8H3xyu39k&index=1" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/nailgun.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Nailgun"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Aggressive cyberpunky track with heavy guitars.</h4>
+          </div>
+        </a>
+        <a href="https://youtu.be/_WIWmTnjwXA?si=PqB2zIFBXjohgAyq" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/apexpredator.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Apex Predator"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Violent synthy metal with extream vocals.</h4>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=pX1XYCxPHnc&list=OLAK5uy_mvGYt6PijqTCtfdgmxxhfOO1OLRV53AF4&index=1" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/fate.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Fate"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Multitrack final boss music for fast-paced FPS.</h4>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_k2MuK4SjHHoPSDkFqAuyasmfUzgm7GGBw" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/60fps.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"60 Fatalities Per Second"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Heavy doom-y tracks intended for multiplayer FPS.</h4>
+          </div>
+        </a>
+        <a href="https://youtu.be/QYHU8iI6G-k?si=lcUtZbh8W_wjjwSe" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/smashcorps.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Smash the Corps"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Made for the GrowlFM contest for the Phantom Liberty DLC.</h4>
+          </div>
+        </a>
+        <a href="https://youtu.be/DdDhmsdEJMQ?si=gyQsGzEFa_lLWHFc" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/inquisition.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Inquisition Core"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Intense breakcore with acoustic and electric guitars.</h4>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=5bhWqtECmKc&list=OLAK5uy_kTFQsvSBVNP_AVzhSKu8qpGgCcUT-dOPw" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/psychehoarder.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Psyche Hoarder"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Two thirds of cyberpunk and one third of metal.</h4>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=Ht8B7F0E4qo&list=OLAK5uy_lQ7-VCdqnJNexgi0prsM9Dkg1KI-DkLoo&index=3" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/gttod.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"GTTOD: Primary Act 1 OST"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Mostly synthwave with small parts of other genres.</h4>
+          </div>
+        </a>
+        <a href="https://youtu.be/e_BlljPdKJk?si=-Ph4G3RJkKEu5DFZ" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/slaying.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Slaying With Portals"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>If Portal was faster, distorted and louder.</h4>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=eUql81sMICY&list=OLAK5uy_mdg9CgX45VsfK7tW8lJbWp0v9cIq8UEwQ" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/tdxphonk.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"TDX Phonk"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>If extreme metal screams were used for phonk.</h4>
+          </div>
+        </a>
+        <a href="https://open.spotify.com/album/5VPMw9vg9ybpoFu58HMBQ4" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/peerreview.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Peer Review, Vol. 1"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Soundtrack for the Half-Life: Decay remake.</h4>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=J9LRROHvf2E&list=PLK3XdWYpU2oww9ZoqTjdeSmML7tBvRPqP" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/turingcomplete.jpg" alt="">
+          <div class="overlay-text chakra">
+            <h6>"Superscalar Symphony"</h6>
+            <h4 style="font-size: 24px; font-weight: normal;"><br>Chill synthwave OST for a computery puzzle game.</h4>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!--==========================
-    Header
-  ============================-->
-  <header id="header">
-    <div class="container">
+  <section id="testimonials">
+    <div class="center-content" style="margin-top: 50px;">
+      <h3 class="chakra">TESTIMONIALS</h3>
+      <div class="small-line"></div>
 
-      <div id="logo" class="pull-left">
-        <h1><a href="#body" class="scrollto">Aaron <span>F.</span> Bianchi</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
-      </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <!--li class="menu-active"><a href="#body">Home</a></li-->
-          <!--li><a href="#about">About</a></li-->
-          <!--li><a href="#services">Services</a></li-->
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <!--li><a href="#team">Team</a></li-->
-          <!--li class="menu-has-children"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li-->
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
-
-  <!--==========================
-    Intro Section
-  ============================-->
-  <section id="intro">
-
-    <div class="intro-content">
-      <h2>Get your <span>eardrums</span><br>READY!</h2>
-      <div>
-        <a href="#portfolio" class="btn-get-started scrollto">Portfolio</a>
-        <a href="#contact" class="btn-projects scrollto">Contact Me</a>
-      </div>
-    </div>
-
-    <div id="intro-carousel" class="owl-carousel" >
-      <div class="item" style="background-image: url('img/demon_osc_3.webp');"></div>
-      <!--video autoplay muted loop class="vid-fondo vid-header-footer">
-        <source src="img/demon_osc_3.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video-->
-    </div>
-
-  </section><!-- #intro -->
-
-  <main id="main">
-
-    <!--==========================
-      About Section
-    ============================-->
-    <section id="about" class="wow fadeInUp">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 about-img">
-            <img src="img/aaronicon.svg" alt="">
-          </div>
-
-          <div class="col-lg-6 content">
-			<h3><br></h3>
-            <h2>ABOUT</h2>
-            <h3>Hey there! I'm Aaron, a music creator specializing in intense electronic and metal genres. I enjoy doing many other genres too.</h3>
-            <h3>I started making music back when I was studying at uni and now I make a living composing for video games and streaming services.</h3>
-            <h3>I also enjoy coding small programs from time to time as well as trying new software to make my music.</h3>
-            <h3>These are some random facts about me:</h3>
-
-            <ul>
-              <li><i class="ion-android-checkmark-circle"></i> Loud music enjoyer.</li>
-              <li><i class="ion-android-checkmark-circle"></i> Big Half-Life and Doom nerd.</li>
-              <li><i class="ion-android-checkmark-circle"></i> I also speak Spanish.</li>
-              <li><i class="ion-android-checkmark-circle"></i> im_something_of_a_scientist_myself.jpg</li>
-            </ul>
-
-          </div>
+      <div class="testimonial-item">
+        <p class="code testimonial-text">
+          "Aaron is a talented, timely, and passionate composer who I could not possibly recommend more. He was able to come onto a project late in its development and elevate its soundtrack to new heights I did not even think were possible. He is communicative, driven, open to experimentation as well as on-the-fly adjustments, and overall has been a joy to work with. You won't find a composer better than him."
+        </p>
+        <a class="testimonial-img-link"href="https://www.youtube.com/@lowhangingnuts" target="_blank"><img src="img/andrew.jpg" class="testimonial-img" alt=""></a>
+        <div class="chakra testimonial-name">
+          <p>Andrew Smith |</p>
+          <a href="https://www.youtube.com/@lowhangingnuts" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://x.com/LowDanglingNuts" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
-
-      </div>
-    </section><!-- #about -->
-
-    <!--==========================
-      Clients Section
-    ============================-->
-    <section id="clients" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Projects</h2>
-          <p>These are some projects I have worked on as a composer in recent years.</p>
-          <p><br><br><br><br></p>
-        </div>
-
-        <div class="owl-carousel clients-carousel clients-container">
-		      <a href="https://aaron-f-bianchi.itch.io/actual-3d-sudoku" target="_blank">
-            <img src="img/clients/3dsudoku.svg" class="img-carousel"/>
-          </a>
-          <a href="https://store.steampowered.com/app/1444480/Turing_Complete/" target="_blank">
-            <img src="img/clients/turing.svg" class="img-carousel"/>
-          </a>
-          <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank">
-            <img src="img/clients/gttod.svg" class="img-carousel"/>
-          </a>
-          <a href="https://www.moddb.com/mods/peer-review" target="_blank">
-            <img src="img/clients/peerreview.svg" class="img-carousel"/>
-          </a>
-          <a href="https://www.moddb.com/mods/black-mesa-hazard-course" target="_blank">
-            <img src="img/clients/hazardcourse.svg" class="img-carousel"/>
-          </a>
-        </div>
-		<p><br><br><br></p>
-      </div>
-    </section><!-- #clients -->
-
-    <!--==========================
-      Portfolio Section
-    ============================-->
-    <section id="portfolio" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Demo Reel</h2>
-          <p> </p>
-        </div>
+        
+        <p class="chakra testimonial-description">a.k.a. low_hanging_nuts, Developer of <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank">GTTOD</a></p>
       </div>
 
-      <div id="video-container" class="vid-port">
-		<iframe width="960" height="540" src="https://www.youtube.com/embed/EtrEmkpgJVI?si=RlN7RN6GjlCTG65g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-	  
-      <div class="container">
-        <div class="section-header">
-		  <p><br><br></p>
-          <h2>Portfolio</h2>
-          <p>Take a listen to some of my work!</p>
+      <div class="testimonial-item">
+        <p class="code testimonial-text">
+          "Aaron is a very dedicated composer capable of adapting to any style. In addition to being fast, he is always surprising with new ideas for the future of any given project."
+        </p>
+        <a class="testimonial-img-link"href="https://x.com/thelenoax?s=09" target="_blank"><img src="img/lenoax.jpg" class="testimonial-img" alt=""></a>
+        <div class="chakra testimonial-name">
+          <p>Sebastián Ignacio Román |</p>
+          <a href="https://www.youtube.com/@Lenoax" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://x.com/thelenoax?s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.artstation.com/lenoax" target="_blank"><i class="fab fa-deviantart"></i></a>
         </div>
+        
+        <p class="chakra testimonial-description">a.k.a. Lenoax, 3D Modeler & Composer</p>
       </div>
       
-      <div class="container-fluid">
-        <div class="row no-gutters">
+      <div class="testimonial-item">
+        <p class="code testimonial-text">
+          "Aaron is talented and easy to work with. He cares about his work and delivers high quality music. I can highly recommend him."
+        </p>
+        <a class="testimonial-img-link"href="https://www.linkedin.com/in/stefanlund/?trk=public_profile_browsemap" target="_blank"><img src="img/stuffe.jpeg" class="testimonial-img" alt=""></a>
+        <div class="chakra testimonial-name">
+          <p>Stefan Lund |</p>
+          <a href="https://www.linkedin.com/in/stefanlund/?trk=public_profile_browsemap" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        
+        <p class="chakra testimonial-description">a.k.a. Stuffe, Developer of <a href="https://store.steampowered.com/app/1444480/Turing_Complete/" target="_blank">Turing Complete</a></p>
+      </div>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="https://www.youtube.com/watch?v=EmRZB66sPGE&list=OLAK5uy_ndcqZ2KHBwRYJ4wKX1FEViqc8H3xyu39k&index=1" target="_blank">
-                <img src="img/portfolio/nailgun.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h1 class="wow fadeInUp">"Nailgun"</h1><h4 class="wow fadeInUp"><br>Aggressive cyberpunky track with heavy guitars.</h4></div>
-                </div>
-              </a>
-            </div>
-          </div>
+      <div class="testimonial-item">
+        <p class="code testimonial-text">
+          "Aaron is a highly creative and dedicated composer whose strong passion for music is reflected in his work. He's reliable and consistent, and working with him is precise, yet always enjoyable and fun. You can always count on Aaron to have your back on any project."
+        </p>
+        <a class="testimonial-img-link"href="https://bg.linkedin.com/in/boyan-bonev-788756209" target="_blank"><img src="img/jimmy.jpeg" class="testimonial-img" alt=""></a>
+        <div class="chakra testimonial-name">
+          <p>Boyan Bonev |</p>
+          <a href="https://github.com/boyan13" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://bg.linkedin.com/in/boyan-bonev-788756209" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        
+        <p class="chakra testimonial-description">a.k.a. Jimmy Lander, Level Designer at <a href="https://psr.digital/" target="_blank">PSR Digital</a></p>
+      </div>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="https://youtu.be/_WIWmTnjwXA?si=PqB2zIFBXjohgAyq" target="_blank">
-                <img src="img/portfolio/apexpredator.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h1 class="wow fadeInUp">"Apex Predator"</h1><h4 class="wow fadeInUp"><br>Violent synthy metal with extream vocals.</h4></div>
-                </div>
-              </a>
-            </div>
-          </div>
+      <div class="testimonial-item">
+        <p class="code testimonial-text">
+          "When I found Aaron on Youtube, he was a quite small artist that was just starting to grow but I immediately noticed the quality of his songs and remixes. Working with him was a blast, totally uncomplicated, quick and super fun. You can always expect high quality music from him."
+        </p>
+        <a class="testimonial-img-link"href="https://music.apple.com/us/artist/metal-fortress/1481270675" target="_blank"><img src="img/karim.jpg" class="testimonial-img" alt=""></a>
+        <div class="chakra testimonial-name">
+          <p>Karim Kiel |</p>
+          <a href="https://www.youtube.com/@MetalFortress14" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://music.apple.com/us/artist/metal-fortress/1481270675" target="_blank"><i class="fab fa-itunes"></i></a>
+          <a href="https://mft14.github.io" target="_blank"><i class="fas fa-globe"></i></a>
+        </div>
+        
+        <p class="chakra testimonial-description">a.k.a. Metal Fortress, Composer</p>
+      </div>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="https://www.youtube.com/watch?v=pX1XYCxPHnc&list=OLAK5uy_mvGYt6PijqTCtfdgmxxhfOO1OLRV53AF4&index=1" target="_blank">
-                <img src="img/portfolio/fate.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h1 class="wow fadeInUp">"Fate"</h1><h4 class="wow fadeInUp"><br>Multitrack final boss music.</h4></div>
-                </div>
-              </a>
-            </div>
-          </div>
+      <div class="testimonial-item">
+        <p class="code testimonial-text">
+          "Aaron took all of my ideas and made them bigger and better. His taste is impeccable, and is incredibly easy to work with."
+        </p>
+        <a class="testimonial-img-link"href="https://music.apple.com/us/artist/titus-seagraves/1812808110" target="_blank"><img src="img/titus.jpg" class="testimonial-img" alt=""></a>
+        <div class="chakra testimonial-name">
+          <p>Titus Seagraves |</p>
+          <a href="https://www.youtube.com/@titusseagraves" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://music.apple.com/us/artist/titus-seagraves/1812808110" target="_blank"><i class="fab fa-itunes"></i></a>
+          <a href="https://www.titusseagraves.com/" target="_blank"><i class="fas fa-globe"></i></a>
+        </div>
+        
+        <p class="chakra testimonial-description">Composer at Layers Deep LLC</p>
+      </div>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="https://www.youtube.com/playlist?list=OLAK5uy_k2MuK4SjHHoPSDkFqAuyasmfUzgm7GGBw" target="_blank">
-                <img src="img/portfolio/60fps.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h1 class="wow fadeInUp">"60 Fatalities Per Second"</h1><h4 class="wow fadeInUp"><br>Heavy doom-y tracks intended for multiplayer FPS.</h4></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="https://youtu.be/QYHU8iI6G-k?si=lcUtZbh8W_wjjwSe" target="_blank">
-                <img src="img/portfolio/smashcorps.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h1 class="wow fadeInUp">"Smash the Corps"</h1><h4 class="wow fadeInUp"><br>Made for the GrowlFM contest for the Phantom Liberty DLC.</h4></div>
-                </div>
-              </a>
-            </div>
+      <div class="dual-testimonial">
+        <div class="testimonial-item">
+          <p class="code testimonial-text">
+            "It has been an utmost pleasure working with Aaron! He is extremely talented and delivers high quality work in a very reasonable time. There are few <!--I've worked with that are -->as dedicated as Aaron is to his craft and it makes everything operate smoothly."
+          </p>
+          <!-- <a class="testimonial-img-link"href="https://x.com/Skrioftw?t=Lb7U6PgcetotBaqTtOX_1Q&s=09" target="_blank"><img src="img/" class="testimonial-img" alt=""></a> -->
+          <div class="chakra testimonial-name">
+            <p>Saverio Kijewski |</p>
+            <a href="https://www.youtube.com/channel/UCNlH3OfDuyziyUtmLzt7-Ww" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/Skrioftw?t=Lb7U6PgcetotBaqTtOX_1Q&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
           </div>
           
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="https://youtu.be/DdDhmsdEJMQ?si=gyQsGzEFa_lLWHFc" target="_blank">
-                <img src="img/portfolio/inquisition.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h1 class="wow fadeInUp">"Inquisition Core"</h1><h4 class="wow fadeInUp"><br>Intense breakcore with acoustic and electric guitars.</h4></div>
-                </div>
-              </a>
-            </div>
-          </div>
+          <p class="chakra testimonial-description">a.k.a. Skrioftw, Developer at Layers Deep LLC</p>
+        </div>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="https://www.youtube.com/watch?v=5bhWqtECmKc&list=OLAK5uy_kTFQsvSBVNP_AVzhSKu8qpGgCcUT-dOPw" target="_blank">
-                <img src="img/portfolio/psychehoarder.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h1 class="wow fadeInUp">"Psyche Hoarder"</h1><h4 class="wow fadeInUp"><br>Two thirds of cyberpunk and one third of metal.</h4></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="https://www.youtube.com/watch?v=Ht8B7F0E4qo&list=OLAK5uy_lQ7-VCdqnJNexgi0prsM9Dkg1KI-DkLoo&index=3" target="_blank">
-                <img src="img/portfolio/gttod.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h1 class="wow fadeInUp">"GTTOD: Primary Act 1 OST"</h1><h4 class="wow fadeInUp"><br>Mostly synthwave with small parts of other genres.</h4></div>
-                </div>
-              </a>
-            </div>
+        <div class="testimonial-item">
+          <p class="code testimonial-text">
+            "Aaron is a very skilled music producer. He has a flexible ear and works with criticism well. But I think the best part of working with him is that he's so laid back. He makes making music fun! You can hear it in every track."
+          </p>
+          <!-- <a class="testimonial-img-link"href="https://open.spotify.com/artist/1t7OHIsnMhS0XaBHpsK5EB" target="_blank"><img src="img/" class="testimonial-img" alt=""></a> -->
+          <div class="chakra testimonial-name">
+            <p>Christian Martin |</p>
+            <a href="https://open.spotify.com/artist/1t7OHIsnMhS0XaBHpsK5EB" target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://x.com/blazing_frames" target="_blank"><i class="fab fa-twitter"></i></a>
           </div>
           
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="https://youtu.be/e_BlljPdKJk?si=-Ph4G3RJkKEu5DFZ" target="_blank">
-                <img src="img/portfolio/slaying.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h1 class="wow fadeInUp">"Slaying With Portals"</h1><h4 class="wow fadeInUp"><br>If Portal was faster and louder.</h4></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="https://www.youtube.com/watch?v=eUql81sMICY&list=OLAK5uy_mdg9CgX45VsfK7tW8lJbWp0v9cIq8UEwQ" target="_blank">
-                <img src="img/portfolio/tdxphonk.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h1 class="wow fadeInUp">"TDX Phonk"</h1><h4 class="wow fadeInUp"><br>If extreme metal screams were used for phonk.</h4></div>
-                </div>
-              </a>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="https://open.spotify.com/album/5VPMw9vg9ybpoFu58HMBQ4" target="_blank">
-                <img src="img/portfolio/peerreview.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h1 class="wow fadeInUp">"Peer Review, Vol. 1"</h1><h4 class="wow fadeInUp"><br>Soundtrack for the Half-Life: Decay remake.</h4></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="https://www.youtube.com/watch?v=J9LRROHvf2E&list=PLK3XdWYpU2oww9ZoqTjdeSmML7tBvRPqP" target="_blank">
-                <img src="img/portfolio/turingcomplete.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h1 class="wow fadeInUp">"Superscalar Symphony"</h1><h4 class="wow fadeInUp"><br>Chill synthwave OST for a computery puzzle game.</h4></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
+          <p class="chakra testimonial-description">a.k.a. Proctomancer, Extreme Metal Vocalist</p>
         </div>
-
-      </div>
-    </section><!-- #portfolio -->
-
-    <!--==========================
-      LONG WAVEFORM
-    ============================-->
-    <!--video autoplay muted loop class="vid-fondo">
-        <source src="img/long_wav_compressed.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video-->
-
-    <!--==========================
-      Testimonials Section
-    ============================-->
-    <section id="testimonials" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Testimonials</h2>
-          <!--p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p-->
-        </div>
-        <!--div class="owl-carousel testimonials-carousel testimonials-container"-->
-            <div class="testimonial-item">
-              <p>
-                <!--img src="img/quote-sign-left.png" class="quote-sign-left" alt=""-->
-                "Aaron is a talented, timely, and passionate composer who I could not possibly recommend more. He was able to come onto a project late in its development and elevate its soundtrack to new heights I did not even think were possible. He is communicative, driven, open to experimentation as well as on-the-fly adjustments, and overall has been a joy to work with. You won't find a composer better than him."
-                <!--img src="img/quote-sign-right.png" class="quote-sign-right" alt=""-->
-              </p>
-              <a href="https://www.youtube.com/@lowhangingnuts" target="_blank"><img src="img/andrew.jpg" class="testimonial-img" alt=""></a>
-              <h3>
-                Andrew Smith |
-                <a href="https://www.youtube.com/@lowhangingnuts" target="_blank"><i class="fa fa-youtube-play"></i></a>
-                <a href="https://x.com/LowDanglingNuts" target="_blank"><i class="fa fa-twitter"></i></a>
-              </h3>
-              <h4>a.k.a. low_hanging_nuts, Developer of <a href="https://store.steampowered.com/app/541200/GTTOD_Get_To_The_Orange_Door/" target="_blank" class="a simple">GTTOD</a></h4>
-            </div>
-            
-            <div class="testimonial-item">
-              <p>
-                <!--img src="img/quote-sign-left.png" class="quote-sign-left" alt=""-->
-                "Aaron is a very dedicated composer capable of adapting to any style. In addition to being fast, he is always surprising with new ideas for the future of any given project."
-                <!--img src="img/quote-sign-right.png" class="quote-sign-right" alt=""-->
-              </p>
-              <a href="https://x.com/thelenoax?s=09" target="_blank"><img src="img/lenoax.jpg" class="testimonial-img" alt=""></a>
-              <h3>
-                Sebastián Ignacio Román |
-                <a href="https://www.youtube.com/@Lenoax" target="_blank"><i class="fa fa-youtube-play"></i></a>
-                <a href="https://x.com/thelenoax?s=09" target="_blank"><i class="fa fa-twitter"></i></a>
-                <a href="https://www.artstation.com/lenoax" target="_blank"><i class="fa fa-deviantart"></i></a>
-              </h3>
-              <h4>a.k.a. Lenoax, 3D Modeler & Composer</h4>
-            </div>
-
-            <div class="testimonial-item">
-              <p>
-                <!--img src="img/quote-sign-left.png" class="quote-sign-left" alt=""-->
-                "Aaron is talented and easy to work with. He cares about his work and delivers high quality music. I can highly recommend him."
-                <!--img src="img/quote-sign-right.png" class="quote-sign-right" alt=""-->
-              </p>
-              <a href="https://www.linkedin.com/in/stefanlund/?trk=public_profile_browsemap" target="_blank"><img src="img/stuffe.jpeg" class="testimonial-img" alt=""></a>
-              <h3>
-                Stefan Lund | 
-                <a href="https://www.linkedin.com/in/stefanlund/?trk=public_profile_browsemap" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-              </h3>
-              <h4>a.k.a. Stuffe, Developer of <a href="https://store.steampowered.com/app/1444480/Turing_Complete/" target="_blank" class="a simple">Turing Complete</a></h4>
-            </div>
-
-            <div class="testimonial-item">
-              <p>
-                <!--img src="img/quote-sign-left.png" class="quote-sign-left" alt=""-->
-                "Aaron is a highly creative and dedicated composer whose strong passion for music is reflected in his work. He’s reliable and consistent, and working with him is precise, yet always enjoyable and fun. You can always count on Aaron to have your back on any project."
-                <!--img src="img/quote-sign-right.png" class="quote-sign-right" alt=""-->
-              </p>
-              <a href="https://bg.linkedin.com/in/boyan-bonev-788756209" target="_blank"><img src="img/jimmy.jpeg" class="testimonial-img" alt=""></a>
-              <h3>
-                Boyan Bonev |
-                <a href="https://github.com/boyan13" target="_blank"><i class="fa fa-github"></i></a>
-                <!--a href="https://x.com/JimmyLanderr" target="_blank"><i class="fa fa-twitter"></i></a-->
-                <a href="https://bg.linkedin.com/in/boyan-bonev-788756209" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-                <!--a href="https://steamcommunity.com/id/jlander/" target="_blank"><i class="fa fa-steam-square"></i></a-->
-              </h3>
-              <h4>a.k.a. Jimmy Lander, Level Designer at <a href="https://psr.digital/" target="_blank" class="a simple">PSR Digital</a></h4>
-            </div>
-
-            <div class="testimonial-item">
-              <p>
-                <!--img src="img/quote-sign-left.png" class="quote-sign-left" alt=""-->
-                "When I found Aaron on Youtube, he was a quite small artist that was just starting to grow but I immediately noticed the quality of his songs and remixes. Working with him was a blast, totally uncomplicated, quick and super fun. You can always expect high quality music from him."
-                <!--img src="img/quote-sign-right.png" class="quote-sign-right" alt=""-->
-              </p>
-              <a href="https://music.apple.com/us/artist/metal-fortress/1481270675" target="_blank"><img src="img/karim.jpg" class="testimonial-img" alt=""></a>
-              <h3>
-                Karim Kiel | 
-                <a href="https://www.youtube.com/@MetalFortress14" target="_blank"><i class="fa fa-youtube-play"></i></a>
-                <a href="https://music.apple.com/us/artist/metal-fortress/1481270675" target="_blank"><i class="fa fa-music"></i></a>
-                <a href="https://mft14.github.io" target="_blank"><i class="fa fa-external-link"></i></a>
-              </h3>
-              <h4>a.k.a. Metal Fortress, Composer</h4>
-            </div>
-
-            <div class="testimonial-item">
-              <p>
-                <!--img src="img/quote-sign-left.png" class="quote-sign-left" alt=""-->
-                "Aaron took all of my ideas and made them bigger and better. His taste is impeccable, and is incredibly easy to work with."
-                <!--img src="img/quote-sign-right.png" class="quote-sign-right" alt=""-->
-              </p>
-              <a href="https://music.apple.com/us/artist/titus-seagraves/1812808110" target="_blank"><img src="img/titus.jpg" class="testimonial-img" alt=""></a>
-              <h3>
-                Titus Seagraves |
-                <a href="https://www.youtube.com/@titusseagraves" target="_blank"><i class="fa fa-youtube-play"></i></a>
-                <a href="https://music.apple.com/us/artist/titus-seagraves/1812808110" target="_blank"><i class="fa fa-music"></i></a>
-                <a href="https://www.titusseagraves.com/" target="_blank"><i class="fa fa-external-link"></i></a>
-              </h3>
-              <h4>Composer at Layers Deep LLC</h4>
-            </div>
-
-            <div class="row">
-
-              <div class="col-lg-6">
-                <div class="box wow fadeInLeft flex-column">
-                  <div class="testimonial-item">
-                    <p>
-                      <!--img src="img/quote-sign-left.png" class="quote-sign-left" alt=""-->
-                      "It has been an utmost pleasure working with Aaron! He is extremely talented and delivers high quality work in a very reasonable time. There are few <!--I've worked with that are -->as dedicated as Aaron is to his craft and it makes everything operate smoothly."
-                      <!--img src="img/quote-sign-right.png" class="quote-sign-right" alt=""-->
-                    </p>
-                    <a href="https://x.com/Skrioftw?t=Lb7U6PgcetotBaqTtOX_1Q&s=09" target="_blank"><img src="img/" class="testimonial-img" alt=""></a>
-                    <h3>
-                      Saverio Kijewski |
-                      <a href="https://www.youtube.com/channel/UCNlH3OfDuyziyUtmLzt7-Ww" target="_blank"><i class="fa fa-youtube-play"></i></a>
-                      <a href="https://x.com/Skrioftw?t=Lb7U6PgcetotBaqTtOX_1Q&s=09" target="_blank"><i class="fa fa-twitter"></i></a>
-                    </h3>
-                    <h4>a.k.a. Skrioftw, Developer at Layers Deep LLC</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-6">
-                <div class="box wow fadeInRight flex-column">
-                  <div class="testimonial-item">
-                    <p>
-                      <!--img src="img/quote-sign-left.png" class="quote-sign-left" alt=""-->
-                      "Aaron is a very skilled music producer. He has a flexible ear and works with criticism well. But I think the best part of working with him is that he's so laid back. He makes making music fun! You can hear it in every track."
-                      <!--img src="img/quote-sign-right.png" class="quote-sign-right" alt=""-->
-                    </p>
-                    <a href="https://open.spotify.com/artist/1t7OHIsnMhS0XaBHpsK5EB" target="_blank"><img src="img/.jpg" class="testimonial-img" alt=""></a>
-                    <h3>
-                      Christian Martin |
-                      <a href="https://open.spotify.com/artist/1t7OHIsnMhS0XaBHpsK5EB" target="_blank"><i class="fa fa-spotify"></i></a>
-                      <a href="https://x.com/blazing_frames" target="_blank"><i class="fa fa-twitter"></i></a>
-                    </h3>
-                    <h4>a.k.a. Proctomancer, Extreme Metal Vocalist</h4>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-        <!--/div-->
-      </div>
-    </section><!-- #testimonials -->
-
-    <!--==========================
-      Services Section
-    ============================-->
-    <section id="services">
-      <div class="container">
-        <div class="section-header">
-          <h2>Streaming Services</h2>
-          <p>Surf through my entire discography.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInLeft flex-column">
-              <div class="icon pota">
-				<a href="https://open.spotify.com/artist/7IsJv5qSfAQiIdee3wzaBJ" target="_blank">
-				  <img src="img/spotify.svg" alt="Spotify" class="streaming">
-				</a>
-			  </div>
-              <h4 class="title"><a href="https://open.spotify.com/artist/7IsJv5qSfAQiIdee3wzaBJ" target="_blank">Spotify</a></h4>
-              <p class="description"></p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInRight flex-column">
-              <div class="icon pota">
-				<a href="https://music.apple.com/pe/artist/aaron-f-bianchi-jupiter/1527705673" target="_blank">
-				  <img src="img/applemusic.svg" alt="Apple Music" class="streaming">
-				</a>
-			  </div>
-              <h4 class="title"><a href="https://music.apple.com/pe/artist/aaron-f-bianchi-jupiter/1527705673" target="_blank">Apple Music</a></h4>
-              <p class="description"></p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInLeft flex-column">
-              <div class="icon pota">
-				<a href="https://music.youtube.com/channel/UC2QFPZfv-Qnc24bvPqBK9NA" target="_blank">
-				  <img src="img/ytmusic.svg" alt="YT Music" class="streaming">
-				</a>
-			  </div>
-              <h4 class="title"><a href="https://music.youtube.com/channel/UC2QFPZfv-Qnc24bvPqBK9NA" target="_blank">YouTube Music</a></h4>
-              <p class="description"></p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInRight flex-column">
-              <div class="icon pota">
-				<a href="https://www.youtube.com/channel/UC7pSE1HaYbk1eBK6ixRsCfw" target="_blank">
-				  <img src="img/yt.svg" alt="YT" class="streaming">
-				</a>
-			  </div>
-              <h4 class="title"><a href="https://www.youtube.com/channel/UC7pSE1HaYbk1eBK6ixRsCfw" target="_blank">My YouTube Channel</a></h4>
-              <p class="description"></p>
-            </div>
-          </div>
-          
-          <div class="col-lg-6">
-            <div class="box wow fadeInLeft flex-column">
-              <div class="icon pota">
-				<a href="https://music.amazon.com/es-ar/artists/B08FWTYZMM" target="_blank">
-				  <img src="img/Amazon.svg" alt="Amazon" class="streaming">
-				</a>
-			  </div>
-              <h4 class="title"><a href="https://music.amazon.com/es-ar/artists/B08FWTYZMM" target="_blank">Amazon Music</a></h4>
-              <p class="description"></p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInRight flex-column">
-              <div class="icon pota">
-				<a href="https://www.deezer.com/us/artist/103990492" target="_blank">
-				  <img src="img/deezer.svg" alt="Deezer" class="streaming">
-				</a>
-			  </div>
-              <h4 class="title"><a href="https://www.deezer.com/us/artist/103990492" target="_blank">Deezer</a></h4>
-              <p class="description"></p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- #services -->
-
-    <!--==========================
-      Call To Action Section
-    ============================>
-    <section id="call-to-action" class="wow fadeInUp">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-9 text-center text-lg-left">
-            <h3 class="cta-title">Call To Action</h3>
-            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- #call-to-action -->
-
-    <!--==========================
-      Our Team Section
-    ============================-->
-    <section id="team" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>SIDE PROJECTS</h2>
-          <p>These don't necessarily have much to do with my music, but I made them as a hobby and they show what I'm capable of in other areas.</p>
-        </div>
-        <div class="row sideprojects">
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic">
-                <a href="https://aaron-f-bianchi.itch.io/actual-3d-sudoku" target="_blank"><img src="img/side/3dsudoku-side-line.svg" alt=""></a>
-              </div>
-              <div class="details">
-                <h4>"Actual 3D Sudoku"</h4>
-                <span>Fun, little, not-as-scary-as-it-looks, 3D sudoku puzzle game.</span>
-                <div class="social">
-                  <a href="https://youtu.be/8OPTOuD62Gw?si=z01a3mPn_3MRM5SA" target="_blank"><i class="fa fa-youtube-play"></i></a>
-                  <a href="https://aaron-f-bianchi.itch.io/actual-3d-sudoku" target="_blank"><i class="fa fa-external-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic">
-                <a href="https://github.com/aaronfbianchi/LSaO-visualizer" target="_blank"><img src="img/side/lsao_icon.svg" alt=""></a>
-              </div>
-              <div class="details">
-                <h4>"LSaO Visualizer"</h4>
-                <span>Linear spectrum and osciloscope audio visualization tool.</span>
-                <div class="social">
-                  <a href="https://youtu.be/IIGqghktYas?si=c-XgMkxPP-XgNivS" target="_blank"><i class="fa fa-youtube-play"></i></a>
-                  <a href="https://github.com/aaronfbianchi/LSaO-visualizer" target="_blank"><i class="fa fa-github"></i></a>
-                  <a href="https://aaron-f-bianchi.itch.io/lsao" target="_blank"><i class="fa fa-external-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </section><!-- #team -->
-
-
-
-  </main>
-  
-  <!--==========================
-    Footer
-  ============================-->
-  <footer id="footer">
-	<!--==========================
-      Contact Section
-    ============================-->
-    <div id="contact" class="intro-content">
-      <div class="container">
-        <div class="section-header">
-          <h2>Contact</h2>
-          <p>Contact me for work inquiries.</p>
-        </div>
-
-        <div class="contact-info contacts flex">
-
-          <div class="col-md-4">
-            <div class="contact-address">
-              <img src="img/discord.svg" class="ion-ios-telephone-outline discord"></img>
-              <h3>Discord</h3>
-              <address>jup7140</address>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="contact-email">
-              <i class="ion-ios-email-outline"></i>
-              <h3>Email</h3>
-              <p><a href="mailto:aaronf.bianchi@gmail.com">aaronf.bianchi@gmail.com</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> 
-    <!--Contact-->
-	  
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Aaron F. Bianchi</strong>. All Rights Reserved.
-      </div>
-      <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Reveal
-        -->
-        <a href="https://bootstrapmade.com/">Free Bootstrap Templates</a> by BootstrapMade
       </div>
     </div>
-    <div class="vid-footer" loading="lazy" style="background-image: url('img/footer_3.webp');"></div>
+  </section>
 
-  </footer><!-- #footer -->
-  
-  
-  
-  
+  <section id="streaming">
+    <div class="center-content" style="margin-top: 0px;">
+      <h3 class="chakra">STREAMING SERVICES</h3>
+      <div class="small-line"></div>
+      <h5 class="code" style="margin-bottom: 50px;">Surf through my entire discography.</h5>
+    </div>
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <div class="streaming-container chakra">
+      <div class="streaming-item">
+        <a href="https://open.spotify.com/artist/7IsJv5qSfAQiIdee3wzaBJ" target="_blank">
+				  <img src="img/spotify.svg" alt="Spotify-logo">
+          <p>Spotify</p>
+				</a>
+      </div>
 
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+      <div class="streaming-item">
+        <a href="https://music.apple.com/pe/artist/aaron-f-bianchi-jupiter/1527705673" target="_blank">
+				  <img src="img/applemusic.svg" alt="itunes-logo">
+          <p>Apple Music</p>
+				</a>
+      </div>
 
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-  <script src="lib/sticky/sticky.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+      <div class="streaming-item">
+        <a href="https://music.youtube.com/channel/UC2QFPZfv-Qnc24bvPqBK9NA" target="_blank">
+				  <img src="img/ytmusic.svg" alt="ytmusic-logo">
+          <p>YouTube Music</p>
+				</a>
+      </div>
 
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-  
+      <div class="streaming-item">
+        <a href="https://www.youtube.com/channel/UC7pSE1HaYbk1eBK6ixRsCfw" target="_blank">
+				  <img src="img/yt.svg" alt="youtube-logo">
+          <p>My YouTube Channel</p>
+				</a>
+      </div>
+
+      <div class="streaming-item">
+        <a href="https://music.amazon.com/es-ar/artists/B08FWTYZMM" target="_blank">
+				  <img src="img/Amazon.svg" alt="Amazon-logo">
+          <p>Amazon Music</p>
+				</a>
+      </div>
+
+      <div class="streaming-item">
+        <a href="https://www.deezer.com/us/artist/103990492" target="_blank">
+				  <img src="img/deezer.svg" alt="Deezer-logo">
+          <p>Deezer</p>
+				</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="side-projects">
+    <div class="center-content" style="margin-top: 0px;">
+      <h3 class="chakra">SIDE PROJECTS</h3>
+      <div class="small-line"></div>
+      <h5 class="code">These don't necessarily have much to do with my music, but I made them as a hobby and they show what I'm capable of in other areas.</h5>
+    </div>
+
+    <div class="center-content side-container">
+      <div class="side-item">
+        <a href="https://aaron-f-bianchi.itch.io/actual-3d-sudoku" target="_blank"><img src="img/side/3dsudoku-side-line.svg" alt=""></a>
+        <div class="rect-side">
+          <p class="chakra side-item-title">"Actual 3D Sudoku"</p>
+          <p class="code side-item-desc">Fun, little, not-as-scary-as-it-looks, 3D sudoku puzzle game.</p>
+          <div class="side-item-links">
+            <a href="https://youtu.be/8OPTOuD62Gw?si=z01a3mPn_3MRM5SA" target="_blank"><img src="img/yt.svg" alt="youtube-icon"></a>
+            <a href="https://aaron-f-bianchi.itch.io/actual-3d-sudoku" target="_blank"><img src="https://itch.io/favicon.ico" alt="Itch.io"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-item">
+        <a href="https://github.com/aaronfbianchi/LSaO-visualizer" target="_blank"><img src="img/side/lsao_icon.svg" alt=""></a>
+        <div class="rect-side">
+          <p class="chakra side-item-title">"LSaO Visualizer"</p>
+          <p class="code side-item-desc">Linear spectrum and osciloscope audio visualization tool.</p>
+          <div class="side-item-links">
+            <a href="https://youtu.be/IIGqghktYas?si=c-XgMkxPP-XgNivS" target="_blank"><img src="img/yt.svg" alt="youtube-icon"></a>
+            <a href="https://github.com/aaronfbianchi/LSaO-visualizer" target="_blank"><img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub">
+            <a href="https://aaron-f-bianchi.itch.io/lsao" target="_blank"><img src="https://itch.io/favicon.ico" alt="Itch.io"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="center-content" style="margin-top: 0px;">
+      <h3 class="chakra">CONTACT</h3>
+      <div class="small-line"></div>
+      <h5 class="code">Contact me for work inquiries.</h5>
+
+      <div class="contact-container" style="margin-top: 50px;">
+        <div class="contact-item">
+          <div class="contact-img-box">
+            <img src="img/discord.svg" class="contact-icon" alt="Discord Icon"></img>
+          </div>
+          <p class="chakra contact-name">DISCORD</p>
+          <p class="code contact-contact">jup7140</p>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-img-box">
+            <img src="img/envelope.svg" class="contact-icon" alt="Envelope Icon">
+          </div>
+          <p class="chakra contact-name">EMAIL</p>
+          <a class="code contact-contact" href="mailto:aaronf.bianchi@gmail.com">aaronf.bianchi@gmail.com</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="code copyright">
+      &copy; Copyright <strong>Aaron F. Bianchi</strong>. All Rights Reserved.
+    </div>
+
+    <div class="video-container">
+      <video class="footer" autoplay muted loop playsinline>
+        <source src="img/footer_3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </section>
+
+
+
 </body>
 </html>
