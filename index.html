@@ -19,10 +19,12 @@
   <style>
     .chakra {
       font-family: "Chakra Petch", sans-serif;
+      text-size-adjust: 130%;
     }
 
     .code {
       font-family: "Source Code Pro", sans-serif;
+      text-size-adjust: 130%;
     }
 
     :root {
@@ -50,19 +52,16 @@
     h1 {
       font-size: 44px;
       margin: 0;
-      text-size-adjust: 130%;
     }
     h4 {
       font-size: 52px;
       margin: 0;
-      text-size-adjust: 130%;
     }
     h3 {
       font-size: 36px;
       color: var(--acc-azul);
       font-weight: bold;
       margin-bottom: 10px;
-      text-size-adjust: 130%;
     }
     h2 {
       font-size: 18px;
@@ -70,7 +69,6 @@
       font-weight: lighter;
       font-style: italic;
       line-height: 1.5;
-      text-size-adjust: 130%;
     }
     h5 {
       padding: 0px;
@@ -79,22 +77,12 @@
       font-weight: normal;
       line-height: 1.5;
       margin: 0;
-      text-size-adjust: 130%;
     }
     .section-desc {
       font-size: 16px;
       color: var(--clear);
       font-weight: normal;
       line-height: 1.5;
-      text-size-adjust: 130%;
-    }
-
-    p{
-      text-size-adjust: 130%;
-    }
-
-    a{
-      text-size-adjust: 130%;
     }
 
     .center-content {
@@ -300,7 +288,7 @@
       width: 100%;
     }
 
-    @media (max-width: 930px) {
+    @media (max-width: 1080px) {
       .container-center {
         flex-direction: column;
         justify-content: center;
@@ -330,7 +318,6 @@
       display: flex;           /* para poner el icono al costado del textito */
       align-items: center;
       line-height: 1.7;
-      font-family: "Source Code Pro", sans-serif;
     }
 
     ul li i {
@@ -835,7 +822,7 @@
         <h2>I started making music back when I was studying at uni and now I make a living composing for video games and streaming services.</h2>
         <h2>I also enjoy coding small programs from time to time as well as trying new software to make my music.</h2>
         <h2>These are some random facts about me:</h2>
-        <ul>
+        <ul class="code">
           <li><i class="fas fa-check"></i> Loud music enjoyer.</li>
           <li><i class="fas fa-check"></i> Big Half-Life and Doom nerd.</li>
           <li><i class="fas fa-check"></i> I also speak Spanish.</li>
