@@ -46,7 +46,7 @@
      showgrid="false"
      inkscape:zoom="256"
      inkscape:cx="2.359375"
-     inkscape:cy="1.4472656"
+     inkscape:cy="2.0722656"
      inkscape:window-width="2516"
      inkscape:window-height="1408"
      inkscape:window-x="44"
@@ -94,7 +94,7 @@
   <svg:g
      transform="matrix(1,0,0,-1,-0.00210231,4.6734278)"
      id="g13"
-     style="display:inline;fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none">
+     style="display:none;fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none">
     <svg:g
        id="side1"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none">
