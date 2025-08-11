@@ -401,7 +401,8 @@
 
     .item-portfolio{
       width: 25%;
-      transition: transform 0.2s ease;
+      outline: var(--clear) 0px solid;
+      transition: transform 0.2s ease, width 0.2s ease, boder 0.2s ease;
     }
 
     @media (min-width: 900px) and (max-width: 1199px) {
@@ -422,11 +423,13 @@
 
     .box-hidden{
       width: 0%;
+      transition: width 0.2s ease;
     }
 
     /* If the checkbox inside body is checked, change everything */
     #portfolio:has(#style-switch:checked) .item-portfolio {
       width: 21.39037%;
+      outline: var(--clear) 1px solid;
     }
     #portfolio:has(#style-switch:checked) .box-hidden {
       width: 21.39037%;
@@ -525,7 +528,6 @@
     }
 
     .image-overlay-container img {
-
       width: 100%;
       opacity: 1;
       transition: transform 0.5s ease, opacity 0.5s ease;
