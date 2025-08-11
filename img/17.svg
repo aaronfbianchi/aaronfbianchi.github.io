@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    Found by John Bidwell (an undergraduate student at the University of Hawaii) in 1997 or 1998.
+        Source: Private communication between Erich Friedman and John Bidwell, 1998
+            Source: Packing Unit Squares in Squares: A Survey and New Results, by Erich Friedman, Version 2 (July 17, 2000) and later: https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS7/versions and https://erich-friedman.github.io/papers/squares/squares.html
+    First high-precision analytic solution by Thierry Gensane and Philippe Ryckelynck before May 19, 2004.
+        Source: https://doi.org/10.1007/s00454-004-1129-z (Page 11 out of 13)
+        The result of this solution was published as the "s" value to 14 decimal places, but it had a typo (the second "3" was missing, leaving only 13 decimal places).
+    Exact polynomial root solution by David Ellsworth on June 4, 2023. Subsequently confirmed independently by Boris Alexeev on the same day (about 7 hours later), using a very different solution method.
+
+    RootReduce[Solve[{RotationTransform[-a][{s - 1, 2}  - ({x1, 2} + RotationTransform[a][{u2 + 2, v0 - 2}])][[2]] == 0,
+                      RotationTransform[-a][{x5, y5}    - ({x1, 2} + RotationTransform[a][{u1 + 2, 0     }])][[1]] == 0,
+                      RotationTransform[ b][{s - 1, y4} - {x5, y5}                                          ][[1]] == 1}, {s, a, b}][[2]]]
+    RootReduce[Solve[{s+(s-2)*Tan[a]-3*Sec[a] == 3,
+                      Cos[a]*Sin[a] == Sin[a+b]*(1+Sin[b]*(2-s+2*Sec[a]+Sin[a]-(s-3)*Tan[a])),
+                      ((s-3)*(1+Cot[a])-2*Csc[a])*Sin[b]+Cos[b]*(s-2-2*Sec[a]-Sin[a]+(s-3)*Tan[a]) == 1}, {s, a, b}][[2]]]
+    s = Root[-2631254953 + 26662976550*# - 126167814419*#^2 + 358189195800*#^3 - 660388959899*#^4 + 808819596154*#^5 - 662986732745*#^6 + 350268230564*#^7 - 93528282146*#^8 - 18522084588*#^9 + 32970034584*#^10 - 18310153596*#^11 + 6502333062*#^12 - 1640654808*#^13 + 300416928*#^14 - 39318012*#^15 + 3501307*#^16 - 190430*#^17 + 4775*#^18, 2]
+    a = ArcCos[Root[-8 - 40*# - 55*#^2 + 56*#^3 + 218*#^4 + 136*#^5 - 151*#^6 - 232*#^7 - 48*#^8 + 96*#^9 + 46*#^10 - 104*#^11 - 122*#^12 + 56*#^13 + 140*#^14 + 32*#^15 - 24*#^16 + 5*#^18, 2]]
+    b = ArcCsc[Root[-2 - 12*# - 15*#^2 + 20*#^3 - 96*#^4 + 436*#^5 - 258*#^6 - 240*#^7 + 182*#^8 - 680*#^9 + 1015*#^10 + 336*#^11 - 1152*#^12 + 420*#^13 + 54*#^14 + 28*#^15 - 42*#^16 + 4*#^17 + #^18, 3]]
+
+    To get the simplified form of the first equation in the Solve[]: FullSimplify[RotationTransform[...] / Cos[a] == 0]
+-->
+
+<svg:svg
+   width="4.67553"
+   height="4.67553"
+   viewBox="-0.00210231 -0.00210231 4.67553 4.67553"
+   style="fill:#b2b2b2;stroke:#000000;stroke-width:0.00201821px"
+   id="svg"
+   version="1.1"
+   sodipodi:docname="17.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview14"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="256"
+     inkscape:cx="2.359375"
+     inkscape:cy="1.4472656"
+     inkscape:window-width="2516"
+     inkscape:window-height="1408"
+     inkscape:window-x="44"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg" />
+  <svg:script
+     xlink:href="17_files/svgDisp.js"
+     id="script1" />
+  <script />
+  <svg:defs
+     id="defs1">
+    <svg:rect
+       width="4.67553"
+       height="4.67553"
+       id="outer"
+       x="0"
+       y="0" />
+    <svg:rect
+       width="1"
+       height="1"
+       id="one"
+       x="0"
+       y="0" />
+    <svg:g
+       id="sider">
+      <svg:rect
+         style="stroke:none"
+         y="-1"
+         width="1"
+         height="1"
+         id="rect1"
+         x="0" />
+      <svg:path
+         style="fill:none"
+         d="M 0,0 V -1 H 1 V 0"
+         id="path1" />
+    </svg:g>
+  </svg:defs>
+  <svg:use
+     xlink:href="#outer"
+     style="display:inline;fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none"
+     id="use1"
+     transform="translate(-0.00210231,-0.00210231)" />
+  <svg:g
+     transform="matrix(1,0,0,-1,-0.00210231,4.6734278)"
+     id="g13"
+     style="display:inline;fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none">
+    <svg:g
+       id="side1"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none">
+      <svg:path
+         style="fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none"
+         d="M 0,2 H 1 V 1 H 2 V 0 H 0"
+         id="path2" />
+      <svg:path
+         style="fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none"
+         d="M 0,2 H 1 V 0 M 0,1 H 2 V 0"
+         id="path3" />
+      <svg:g
+         transform="matrix(1,0,0,-1,0,4.6755301)"
+         id="g4"
+         style="fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none">
+        <svg:rect
+           style="fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none"
+           width="1"
+           height="1"
+           id="rect3"
+           x="0"
+           y="0" />
+        <svg:path
+           style="fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none"
+           d="M 0,1 H 1 V 0"
+           id="path4" />
+      </svg:g>
+    </svg:g>
+    <svg:use
+       xlink:href="#side1"
+       transform="matrix(-1,0,0,1,4.6755301,0)"
+       id="use4"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none" />
+    <svg:g
+       transform="rotate(39.804959,-2.4420079,1.8841141)"
+       id="g10"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none">
+      <svg:use
+         xlink:href="#one"
+         id="use5"
+         style="fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none" />
+      <svg:use
+         xlink:href="#one"
+         transform="translate(1,0.0568387)"
+         id="use6"
+         style="fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none" />
+      <svg:use
+         xlink:href="#one"
+         transform="translate(0.27642677,-1)"
+         id="use7"
+         style="fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none" />
+      <svg:use
+         xlink:href="#one"
+         transform="translate(1.2764268,-0.9431613)"
+         id="use8"
+         style="fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none" />
+      <svg:use
+         xlink:href="#one"
+         transform="translate(0.40447869,-2)"
+         id="use9"
+         style="fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none" />
+      <svg:use
+         xlink:href="#one"
+         transform="translate(1.4044787,-1.9431613)"
+         id="use10"
+         style="fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none" />
+    </svg:g>
+    <svg:g
+       transform="translate(1.8473248,4.6755301)"
+       id="g12"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none">
+      <svg:use
+         xlink:href="#sider"
+         id="use11"
+         style="fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none" />
+      <svg:use
+         xlink:href="#one"
+         transform="rotate(-36.623786,-1.7751676,-1.7578446)"
+         id="use12"
+         style="fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none" />
+    </svg:g>
+    <svg:use
+       xlink:href="#sider"
+       transform="rotate(-90,3.8944951,-0.78103498)"
+       id="use13"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none" />
+  </svg:g>
+</svg:svg>
