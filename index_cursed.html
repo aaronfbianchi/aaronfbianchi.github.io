@@ -89,6 +89,7 @@
       margin: 0 auto; /*CAMBIAR POR MARGIN 0 AUTO*/
       /* padding: 0 20px; */
       padding: 8px;
+      transition: max-width 0.1s ease;
     }
 
     /* For large screens */
@@ -154,9 +155,14 @@
       color: var(--acc-rojo);
     }
 
+    .hide-on-small{
+      transition: font-size 0.1s ease;
+    }
+
     @media (max-width: 1199px) {
       .hide-on-small {
-        display: none;
+        font-size: 0px;
+        /* display: none; */
       }
     }
 
@@ -263,12 +269,11 @@
     /*---------------------------------*/
 
     .container-center {
-      width: 100%; /* 90% del ancho DE SU CONTENEDOR, no de la pantalla*/
+      width: 100%; /* 100% del ancho DE SU CONTENEDOR, no de la pantalla*/
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 20px;                /* espacio entre el logo y el about */
-
       /* margin: auto; */
     }
 
@@ -292,7 +297,7 @@
         justify-content: center;
       }
       .item-in-container {
-        width: 100%; /* full width when stacked */
+        width: 100%; /* full width when stacked */  
       }
      .item-in-container img {
         width: 100%;
@@ -359,12 +364,13 @@
       object-fit: contain;
       background: var(--bg);
       flex-shrink: 0;
-      opacity: 0.7;
-      transition: opacity 0.3s ease;
+      opacity: 0.8;
+      transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .carousel-track a img:hover {
       opacity: 1;
+      transform: scale(105%);
     }
 
     @keyframes slide {
@@ -690,6 +696,7 @@
     }
 
     .streaming-item{
+      transition: width 0.1s ease;
       width: calc(100%/var(--strm-div)*0.7);
       margin:calc(100%/var(--strm-div)*0.15);
     }
@@ -722,9 +729,11 @@
       justify-content: center;
       align-items: center;
       width: 25%;
+      transition: width 0.1s ease;
     }
 
     .side-item a img{
+      
       width: 100%;
     }
 
@@ -989,13 +998,15 @@
     <div class="center-content" style="margin-top: 0px;">
       <h3 class="chakra">PORTFOLIO</h3>
       <div class="small-line"></div>
-      <p class="section-desc code">Take a listen to some of my work!</p>
-    </div>
-    <div style="display:flex; justify-content: flex-end;">
-      <label class="code">
-        I'm feeling very efficient!
-        <input style="margin-top: 0px; margin-bottom: 20px; margin-right: 10px;" type="checkbox" id="style-switch">
-      </label>
+      <div style="display:flex; justify-content: space-between;">
+        <p class="section-desc code">Take a listen to some of my work!</p>
+
+        <label class="code" style="display:flex;">
+          <p class="section-desc code">Efficiency!</p>
+          <input style="margin-right: 10px;" type="checkbox" id="style-switch">
+        </label>
+        
+      </div>
     </div>
 
     <div class="grid-17">
