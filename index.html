@@ -89,6 +89,7 @@
       margin: 0 auto; /*CAMBIAR POR MARGIN 0 AUTO*/
       /* padding: 0 20px; */
       padding: 8px;
+      transition: max-width 0.1s ease;
     }
 
     /* For large screens */
@@ -140,8 +141,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      /* padding: 10px; */
-      padding: 8px;
       background: var(--bg);
       border-bottom: 1px solid var(--clear);
     }
@@ -156,9 +155,14 @@
       color: var(--acc-rojo);
     }
 
+    .hide-on-small{
+      transition: font-size 0.1s ease;
+    }
+
     @media (max-width: 1199px) {
       .hide-on-small {
-        display: none;
+        font-size: 0px;
+        /* display: none; */
       }
     }
 
@@ -265,12 +269,11 @@
     /*---------------------------------*/
 
     .container-center {
-      width: 100%; /* 90% del ancho DE SU CONTENEDOR, no de la pantalla*/
+      width: 100%; /* 100% del ancho DE SU CONTENEDOR, no de la pantalla*/
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 20px;                /* espacio entre el logo y el about */
-
       /* margin: auto; */
     }
 
@@ -294,7 +297,7 @@
         justify-content: center;
       }
       .item-in-container {
-        width: 100%; /* full width when stacked */
+        width: 100%; /* full width when stacked */  
       }
      .item-in-container img {
         width: 100%;
@@ -359,14 +362,14 @@
       padding-right: calc(100vw/var(--carr-div)/12);
       height: auto;
       object-fit: contain;
-      background: var(--bg);
       flex-shrink: 0;
-      opacity: 0.7;
-      transition: opacity 0.3s ease;
+      opacity: 0.8;
+      transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .carousel-track a img:hover {
       opacity: 1;
+      transform: scale(105%);
     }
 
     @keyframes slide {
@@ -397,23 +400,144 @@
       flex-wrap: wrap;
     }
 
-    .container-portfolio a{
-      width: 25%;
+    .grid-17{
+      opacity: 0;
+      transform: scale(0);
     }
+
+    .grid-17 img{
+      z-index: -100;
+      width:100%; 
+      position:absolute; 
+    }
+
+    .check-text{
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .check-text:hover{
+      color: var(--acc-rojo);
+    }
+
+    .item-portfolio{
+      width: 25%;
+      border: 0px solid var(--clear);
+      box-sizing: border-box;
+      transition: transform 0.2s ease, width 0.1s ease, border 0.1s ease;
+    }
+
     @media (min-width: 900px) and (max-width: 1199px) {
-      .container-portfolio a{
+      .item-portfolio{
         width: 33.3333333%;
       }
     }
     @media (min-width: 700px) and (max-width: 900px) {
-      .container-portfolio a{
+      .item-portfolio{
         width: 50%;
       }
     }
     @media (max-width: 700px) {
-      .container-portfolio a{
+      .item-portfolio{
         width: 100%;
       }
+    }
+
+    .box-hidden{
+      width: 0%;
+      transition: width 0.1s ease;
+    }
+
+    /* If the checkbox inside body is checked, change everything */
+    #portfolio:has(#style-switch:checked) .item-portfolio {
+      width: 21.39037%;
+      border: 3px solid var(--clear);
+    }
+    #portfolio:has(#style-switch:checked) .box-hidden {
+      width: 21.39037%;
+    }
+    #portfolio:has(#style-switch:checked) .grid-17 {
+      transform: scale(1);
+      opacity: 1;
+    }
+    #portfolio:has(#style-switch:checked) .overlay-text {
+      text-size-adjust: 100%;
+    }
+    @media (min-width: 1000px) and (max-width: 1500px) {
+      #portfolio:has(#style-switch:checked) h5 {
+        font-size: 22px;
+      }
+      #portfolio:has(#style-switch:checked) h4 {
+        font-size: 18px;
+      }
+    }
+    @media (min-width: 800px) and (max-width: 1000px) {
+      #portfolio:has(#style-switch:checked) h5 {
+        font-size: 18px;
+      }
+      #portfolio:has(#style-switch:checked) h4 {
+        font-size: 14px;
+      }
+    }
+    @media (max-width: 800px) {
+      #portfolio:has(#style-switch:checked) h5 {
+        font-size: 16px;
+      }
+      #portfolio:has(#style-switch:checked) h4 {
+        font-size: 12px;
+      }
+    }
+
+    #portfolio:has(#style-switch:checked) .box01 {
+      transform: translateX(0);
+    }
+    #portfolio:has(#style-switch:checked) .box02 {
+      transform: translateX(0);
+    }
+    #portfolio:has(#style-switch:checked) .box03 {
+      transform: translateX(67.4%);
+    }
+    #portfolio:has(#style-switch:checked) .box04 {
+      transform: translateX(67.4%);
+    }
+    #portfolio:has(#style-switch:checked) .box05 {
+      transform: translateX(0);
+    }
+    #portfolio:has(#style-switch:checked) .box06 {
+      transform: translateX(5.7%) translateY(61.2%) rotate(-50.1deg);
+    }
+    #portfolio:has(#style-switch:checked) .box07 {
+      transform: translateX(-20.6%) translateY(-7.4%) rotate(-50.1deg);
+    }
+    #portfolio:has(#style-switch:checked) .box08 {
+      transform: translateX(67.4%) translateY(0) rotate(0);
+    }
+    #portfolio:has(#style-switch:checked) .box09 {
+      transform: translateX(20.4%) translateY(20.3%) rotate(-50.1deg);
+    }
+    #portfolio:has(#style-switch:checked) .box10 {
+      transform: translateX(-6.3%) translateY(88.7%) rotate(-50.1deg);
+    }
+    #portfolio:has(#style-switch:checked) .box11 {
+      transform: translateX(-21.2%) translateY(29.6%) rotate(-50.1deg);
+    }
+    #portfolio:has(#style-switch:checked) .box12 {
+      transform: translateX(-47.3%) translateY(-39%) rotate(-50.1deg);
+    }
+    #portfolio:has(#style-switch:checked) .box13 {
+      transform: translateX(367.4%) translateY(-88.6%) rotate(0);
+    }
+    #portfolio:has(#style-switch:checked) .box14 {
+      transform: translateX(174.6%) translateY(-12.8%) rotate(-36.6deg);
+    }
+    #portfolio:has(#style-switch:checked) .box15 {
+      transform: translateX(-15.4%) translateY(67.4%);
+    }
+    #portfolio:has(#style-switch:checked) .box16 {
+      transform: translateX(67.4%) translateY(67.4%);
+    }
+    #portfolio:has(#style-switch:checked) .box17 {
+      transform: translateX(0) translateY(-32.6%);
     }
 
     .image-overlay-container {
@@ -427,7 +551,6 @@
     }
 
     .image-overlay-container img {
-
       width: 100%;
       opacity: 1;
       transition: transform 0.5s ease, opacity 0.5s ease;
@@ -451,7 +574,7 @@
     .overlay-text h4{
       font-size: 24px; 
       font-weight: normal;
-      margin-top: 15px;
+      margin-top: 8%;
     }
 
     .image-overlay-container:hover .overlay-text {
@@ -459,6 +582,14 @@
     }
 
     /*---------------------------------*/
+
+    .grow-hover{
+      transition: transform 0.2s ease;
+    }
+
+    .grow-hover:hover {
+      transform: scale(105%);
+    }
 
     .testimonial-item{
       margin-top: 50px;
@@ -589,6 +720,7 @@
     }
 
     .streaming-item{
+      transition: width 0.1s ease;
       width: calc(100%/var(--strm-div)*0.7);
       margin:calc(100%/var(--strm-div)*0.15);
     }
@@ -621,9 +753,11 @@
       justify-content: center;
       align-items: center;
       width: 25%;
+      transition: width 0.1s ease;
     }
 
     .side-item a img{
+      
       width: 100%;
     }
 
@@ -884,99 +1018,206 @@
     </div>
   </section>
 
-
   <section id="portfolio">
     <div class="center-content" style="margin-top: 0px;">
       <h3 class="chakra">PORTFOLIO</h3>
       <div class="small-line"></div>
-      <p class="section-desc code">Take a listen to some of my work!</p>
+      <div style="display:flex; justify-content: space-between;">
+        <p class="section-desc code">Take a listen to some of my work!</p>
+
+        <label class="code" style="display:flex;">
+          <p class="section-desc code check-text">MOAR EFFICIENCY!</p>
+          <input style="margin-right: 10px;" type="checkbox" id="style-switch">
+        </label>
+        
+      </div>
+    </div>
+
+    <div class="grid-17">
+      <img src="img/17.svg" alt="17 square efficiency grid">
     </div>
 
     <div class="container-portfolio">
-      <a href="https://www.youtube.com/watch?v=EmRZB66sPGE&list=OLAK5uy_ndcqZ2KHBwRYJ4wKX1FEViqc8H3xyu39k&index=1" target="_blank" class="image-overlay-container">
-        <img src="img/portfolio/nailgun.jpg" alt="Nailgun album">
-        <div class="overlay-text chakra">
-          <h5>"Nailgun"</h5>
-          <h4>Aggressive cyberpunky track with heavy guitars.</h4>
-        </div>
-      </a>
-      <a href="https://youtu.be/_WIWmTnjwXA?si=PqB2zIFBXjohgAyq" target="_blank" class="image-overlay-container">
-        <img src="img/portfolio/apexpredator.jpg" alt="Apex Predator Album">
-        <div class="overlay-text chakra">
-          <h5>"Apex Predator"</h5>
-          <h4>Violent synthy metal with extream vocals.</h4>
-        </div>
-      </a>
-      <a href="https://www.youtube.com/watch?v=pX1XYCxPHnc&list=OLAK5uy_mvGYt6PijqTCtfdgmxxhfOO1OLRV53AF4&index=1" target="_blank" class="image-overlay-container">
-        <img src="img/portfolio/fate.jpg" alt="Fate Album">
-        <div class="overlay-text chakra">
-          <h5>"Fate"</h5>
-          <h4>Multitrack final boss music for fast-paced FPS.</h4>
-        </div>
-      </a>
-      <a href="https://www.youtube.com/playlist?list=OLAK5uy_k2MuK4SjHHoPSDkFqAuyasmfUzgm7GGBw" target="_blank" class="image-overlay-container">
-        <img src="img/portfolio/60fps.jpg" alt="60 FPS Album">
-        <div class="overlay-text chakra">
-          <h5>"60 Fatalities Per Second"</h5>
-          <h4>Heavy doom-y tracks intended for multiplayer FPS.</h4>
-        </div>
-      </a>
-      <a href="https://youtu.be/QYHU8iI6G-k?si=lcUtZbh8W_wjjwSe" target="_blank" class="image-overlay-container">
-        <img src="img/portfolio/smashcorps.jpg" alt="Smash the Corps Album">
-        <div class="overlay-text chakra">
-          <h5>"Smash the Corps"</h5>
-          <h4>Made for the GrowlFM contest for the Phantom Liberty DLC.</h4>
-        </div>
-      </a>
-      <a href="https://youtu.be/DdDhmsdEJMQ?si=gyQsGzEFa_lLWHFc" target="_blank" class="image-overlay-container">
-        <img src="img/portfolio/inquisition.jpg" alt="Inquisition Core Album">
-        <div class="overlay-text chakra">
-          <h5>"Inquisition Core"</h5>
-          <h4>Intense breakcore with acoustic and electric guitars.</h4>
-        </div>
-      </a>
-      <a href="https://www.youtube.com/watch?v=5bhWqtECmKc&list=OLAK5uy_kTFQsvSBVNP_AVzhSKu8qpGgCcUT-dOPw" target="_blank" class="image-overlay-container">
-        <img src="img/portfolio/psychehoarder.jpg" alt="Psyche Hoarder Album">
-        <div class="overlay-text chakra">
-          <h5>"Psyche Hoarder"</h5>
-          <h4>Two thirds of cyberpunk and one third of metal.</h4>
-        </div>
-      </a>
-      <a href="https://www.youtube.com/watch?v=Ht8B7F0E4qo&list=OLAK5uy_lQ7-VCdqnJNexgi0prsM9Dkg1KI-DkLoo&index=3" target="_blank" class="image-overlay-container">
-        <img src="img/portfolio/gttod.jpg" alt="GTTOD Act 1 Album">
-        <div class="overlay-text chakra">
-          <h5>"GTTOD: Primary Act 1 OST"</h5>
-          <h4>Mostly synthwave with small parts of other genres.</h4>
-        </div>
-      </a>
-      <a href="https://youtu.be/e_BlljPdKJk?si=-Ph4G3RJkKEu5DFZ" target="_blank" class="image-overlay-container">
-        <img src="img/portfolio/slaying.jpg" alt="Slaying With Portals Album">
-        <div class="overlay-text chakra">
-          <h5>"Slaying With Portals"</h5>
-          <h4>If Portal was faster, distorted and louder.</h4>
-        </div>
-      </a>
-      <a href="https://www.youtube.com/watch?v=eUql81sMICY&list=OLAK5uy_mdg9CgX45VsfK7tW8lJbWp0v9cIq8UEwQ" target="_blank" class="image-overlay-container">
-        <img src="img/portfolio/tdxphonk.jpg" alt="TDX Phonk Album">
-        <div class="overlay-text chakra">
-          <h5>"TDX Phonk"</h5>
-          <h4>If extreme metal screams were used for phonk.</h4>
-        </div>
-      </a>
-      <a href="https://open.spotify.com/album/5VPMw9vg9ybpoFu58HMBQ4" target="_blank" class="image-overlay-container">
-        <img src="img/portfolio/peerreview.jpg" alt="Peer Review Vol. 1 Album">
-        <div class="overlay-text chakra">
-          <h5>"Peer Review, Vol. 1"</h5>
-          <h4>Soundtrack for the Half-Life: Decay remake.</h4>
-        </div>
-      </a>
-      <a href="https://www.youtube.com/watch?v=J9LRROHvf2E&list=PLK3XdWYpU2oww9ZoqTjdeSmML7tBvRPqP" target="_blank" class="image-overlay-container">
-        <img src="img/portfolio/turingcomplete.jpg" alt="Turing Complete OST Album">
-        <div class="overlay-text chakra">
-          <h5>"Superscalar Symphony"</h5>
-          <h4>Chill synthwave OST for a computery puzzle game.</h4>
-        </div>
-      </a>
+      <div class="item-portfolio box01">
+        <a href="https://www.youtube.com/watch?v=EmRZB66sPGE&list=OLAK5uy_ndcqZ2KHBwRYJ4wKX1FEViqc8H3xyu39k&index=1" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/nailgun.jpg" alt="Nailgun album">
+          <div class="overlay-text chakra">
+            <h5>"Nailgun"</h5>
+            <h4>Aggressive cyberpunky track with heavy guitars.</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-portfolio box02">
+        <a href="https://youtu.be/_WIWmTnjwXA?si=PqB2zIFBXjohgAyq" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/apexpredator.jpg" alt="Apex Predator Album">
+          <div class="overlay-text chakra">
+            <h5>"Apex Predator"</h5>
+            <h4>Violent synthy metal with extream vocals.</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-portfolio box03">
+        <a href="https://www.youtube.com/watch?v=pX1XYCxPHnc&list=OLAK5uy_mvGYt6PijqTCtfdgmxxhfOO1OLRV53AF4&index=1" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/fate2.jpg" alt="Fate Album">
+          <div class="overlay-text chakra">
+            <h5>"Fate"</h5>
+            <h4>Multitrack final boss music for fast-paced FPS.</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-portfolio box04">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_k2MuK4SjHHoPSDkFqAuyasmfUzgm7GGBw" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/60fps.jpg" alt="60 FPS Album">
+          <div class="overlay-text chakra">
+            <h5>"60 Fatalities Per Second"</h5>
+            <h4>Heavy doom-y tracks intended for multiplayer FPS.</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-portfolio box05">
+        <a href="https://youtu.be/QYHU8iI6G-k?si=lcUtZbh8W_wjjwSe" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/smashcorps.jpg" alt="Smash the Corps Album">
+          <div class="overlay-text chakra">
+            <h5>"Smash the Corps"</h5>
+            <h4>Made for the GrowlFM contest for the Phantom Liberty DLC.</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-portfolio box06">
+        <a href="https://youtu.be/DdDhmsdEJMQ?si=gyQsGzEFa_lLWHFc" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/inquisition.jpg" alt="Inquisition Core Album">
+          <div class="overlay-text chakra">
+            <h5>"Inquisition Core"</h5>
+            <h4>Intense breakcore with acoustic and electric guitars.</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-portfolio box07">
+        <a href="https://www.youtube.com/watch?v=5bhWqtECmKc&list=OLAK5uy_kTFQsvSBVNP_AVzhSKu8qpGgCcUT-dOPw" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/psychehoarder.jpg" alt="Psyche Hoarder Album">
+          <div class="overlay-text chakra">
+            <h5>"Psyche Hoarder"</h5>
+            <h4>Two thirds of cyberpunk and one third of metal.</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-portfolio box08">
+        <a href="https://www.youtube.com/watch?v=Ht8B7F0E4qo&list=OLAK5uy_lQ7-VCdqnJNexgi0prsM9Dkg1KI-DkLoo&index=3" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/gttod.jpg" alt="GTTOD Act 1 Album">
+          <div class="overlay-text chakra">
+            <h5>"GTTOD: Primary Act 1 OST"</h5>
+            <h4>Mostly synthwave with small parts of other genres.</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-portfolio box09">
+        <a href="https://youtu.be/e_BlljPdKJk?si=-Ph4G3RJkKEu5DFZ" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/slaying.jpg" alt="Slaying With Portals Album">
+          <div class="overlay-text chakra">
+            <h5>"Slaying With Portals"</h5>
+            <h4>If Portal was faster, distorted and louder.</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-portfolio box10">
+        <a href="https://www.youtube.com/watch?v=eUql81sMICY&list=OLAK5uy_mdg9CgX45VsfK7tW8lJbWp0v9cIq8UEwQ" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/tdxphonk.jpg" alt="TDX Phonk Album">
+          <div class="overlay-text chakra">
+            <h5>"TDX Phonk"</h5>
+            <h4>If extreme metal screams were used for phonk.</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-portfolio box11">
+        <a href="https://open.spotify.com/album/5VPMw9vg9ybpoFu58HMBQ4" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/peerreview.jpg" alt="Peer Review Vol. 1 Album">
+          <div class="overlay-text chakra">
+            <h5>"Peer Review, Vol. 1"</h5>
+            <h4>Soundtrack for the Half-Life: Decay remake.</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-portfolio box12">
+        <a href="https://www.youtube.com/watch?v=J9LRROHvf2E&list=PLK3XdWYpU2oww9ZoqTjdeSmML7tBvRPqP" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/turingcomplete.jpg" alt="Turing Complete OST Album">
+          <div class="overlay-text chakra">
+            <h5>"Superscalar Symphony"</h5>
+            <h4>Chill synthwave OST for a computery puzzle game.</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-portfolio box13 box-hidden">
+        <a href="https://youtu.be/G3lfcFPciQE?si=jN5FL8cBdNvRV4Wl" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/hyperblasted.jpg" alt="Hyperblasted Album">
+          <div class="overlay-text chakra">
+            <h5>"Hyperblasted"</h5>
+            <h4>Creepy industrial metal intended for multiplayer FPS.</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-portfolio box14 box-hidden">
+        <a href="https://youtu.be/cuAAdrQr0Ug?si=ZkHRr3022hm48-TM" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/hellhacker.jpg" alt="Hellhacker Album">
+          <div class="overlay-text chakra">
+            <h5>"Hellhacker"</h5>
+            <h4>Soundtrack for the end of time.</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-portfolio box15 box-hidden">
+        <a href="https://www.youtube.com/watch?v=Px0nkVYgDWs" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/deathitself.jpg" alt="Death Itself Album">
+          <div class="overlay-text chakra">
+            <h5>"Death Itself"</h5>
+            <h4>Glitchy and cyberpunk song.</h4>
+          </div>
+        </a>
+      </div>
+
+      <!-- <div class="item-portfolio box16 box-hidden">
+        <a href="https://youtu.be/qBVeQhPJ6sQ?si=PQzRB7Auyhdo5UP9" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/corrupted.jpg" alt="Corrupted by God Album">
+          <div class="overlay-text chakra">
+            <h5>"Corrupted by God"</h5>
+            <h4>Blackened metal song with choirs and acoustic guitar.</h4>
+          </div>
+        </a>
+      </div> -->
+
+      <div class="item-portfolio box16 box-hidden">
+        <a href="https://youtu.be/qBVeQhPJ6sQ?si=PQzRB7Auyhdo5UP9" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/bloodoverdrive.jpg" alt="Blood Overdrive Album">
+          <div class="overlay-text chakra">
+            <h5>"Blood Overdrive"</h5>
+            <h4>Boss music for GTTOD.</h4>
+          </div>
+        </a>
+      </div>
+
+      <div class="item-portfolio box17 box-hidden">
+        <a href="https://youtu.be/kxGTbU4WwiQ?si=KeX859uorEZraIZo" target="_blank" class="image-overlay-container">
+          <img src="img/portfolio/sisyphus.jpg" alt="The Hunger Of Sisyphus Album">
+          <div class="overlay-text chakra">
+            <h5>"The Hunger Of Sisyphus"</h5>
+            <h4>Fun song about the struggle.</h4>
+          </div>
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -989,7 +1230,7 @@
         <p class="code testimonial-text">
           "Aaron is a talented, timely, and passionate composer who I could not possibly recommend more. He was able to come onto a project late in its development and elevate its soundtrack to new heights I did not even think were possible. He is communicative, driven, open to experimentation as well as on-the-fly adjustments, and overall has been a joy to work with. You won't find a composer better than him."
         </p>
-        <a class="testimonial-img-link"href="https://www.youtube.com/@lowhangingnuts" target="_blank"><img src="img/andrew.jpg" class="testimonial-img" alt="Andrew Smith"></a>
+        <a class="testimonial-img-link grow-hover"href="https://www.youtube.com/@lowhangingnuts" target="_blank"><img src="img/andrew.jpg" class="testimonial-img" alt="Andrew Smith"></a>
         <div class="chakra testimonial-name">
           <p>Andrew Smith |</p>
           <a href="https://www.youtube.com/@lowhangingnuts" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -1003,7 +1244,7 @@
         <p class="code testimonial-text">
           "Aaron is a very dedicated composer capable of adapting to any style. In addition to being fast, he is always surprising with new ideas for the future of any given project."
         </p>
-        <a class="testimonial-img-link"href="https://x.com/thelenoax?s=09" target="_blank"><img src="img/lenoax.jpg" class="testimonial-img" alt="Lenoax"></a>
+        <a class="testimonial-img-link grow-hover"href="https://x.com/thelenoax?s=09" target="_blank"><img src="img/lenoax.jpg" class="testimonial-img" alt="Lenoax"></a>
         <div class="chakra testimonial-name">
           <p>Sebastián Ignacio Román |</p>
           <a href="https://www.youtube.com/@Lenoax" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -1018,7 +1259,7 @@
         <p class="code testimonial-text">
           "Aaron is talented and easy to work with. He cares about his work and delivers high quality music. I can highly recommend him."
         </p>
-        <a class="testimonial-img-link"href="https://www.linkedin.com/in/stefanlund/?trk=public_profile_browsemap" target="_blank"><img src="img/stuffe.jpeg" class="testimonial-img" alt="Stuffe"></a>
+        <a class="testimonial-img-link grow-hover"href="https://www.linkedin.com/in/stefanlund/?trk=public_profile_browsemap" target="_blank"><img src="img/stuffe.jpeg" class="testimonial-img" alt="Stuffe"></a>
         <div class="chakra testimonial-name">
           <p>Stefan Lund |</p>
           <a href="https://www.linkedin.com/in/stefanlund/?trk=public_profile_browsemap" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -1031,7 +1272,7 @@
         <p class="code testimonial-text">
           "Aaron is a highly creative and dedicated composer whose strong passion for music is reflected in his work. He's reliable and consistent, and working with him is precise, yet always enjoyable and fun. You can always count on Aaron to have your back on any project."
         </p>
-        <a class="testimonial-img-link"href="https://bg.linkedin.com/in/boyan-bonev-788756209" target="_blank"><img src="img/jimmy.jpeg" class="testimonial-img" alt="Jimmy Lander"></a>
+        <a class="testimonial-img-link grow-hover"href="https://bg.linkedin.com/in/boyan-bonev-788756209" target="_blank"><img src="img/jimmy.jpeg" class="testimonial-img" alt="Jimmy Lander"></a>
         <div class="chakra testimonial-name">
           <p>Boyan Bonev |</p>
           <a href="https://github.com/boyan13" target="_blank"><i class="fab fa-github"></i></a>
@@ -1045,7 +1286,7 @@
         <p class="code testimonial-text">
           "When I found Aaron on Youtube, he was a quite small artist that was just starting to grow but I immediately noticed the quality of his songs and remixes. Working with him was a blast, totally uncomplicated, quick and super fun. You can always expect high quality music from him."
         </p>
-        <a class="testimonial-img-link"href="https://music.apple.com/us/artist/metal-fortress/1481270675" target="_blank"><img src="img/karim.jpg" class="testimonial-img" alt="Metal Fortress"></a>
+        <a class="testimonial-img-link grow-hover"href="https://music.apple.com/us/artist/metal-fortress/1481270675" target="_blank"><img src="img/karim.jpg" class="testimonial-img" alt="Metal Fortress"></a>
         <div class="chakra testimonial-name">
           <p>Karim Kiel |</p>
           <a href="https://www.youtube.com/@MetalFortress14" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -1060,7 +1301,7 @@
         <p class="code testimonial-text">
           "Aaron took all of my ideas and made them bigger and better. His taste is impeccable, and is incredibly easy to work with."
         </p>
-        <a class="testimonial-img-link"href="https://music.apple.com/us/artist/titus-seagraves/1812808110" target="_blank"><img src="img/titus.jpg" class="testimonial-img" alt="Titus Seagraves"></a>
+        <a class="testimonial-img-link grow-hover"href="https://music.apple.com/us/artist/titus-seagraves/1812808110" target="_blank"><img src="img/titus.jpg" class="testimonial-img" alt="Titus Seagraves"></a>
         <div class="chakra testimonial-name">
           <p>Titus Seagraves |</p>
           <a href="https://www.youtube.com/@titusseagraves" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -1076,7 +1317,7 @@
           <p class="code testimonial-text">
             "It has been an utmost pleasure working with Aaron! He is extremely talented and delivers high quality work in a very reasonable time. There are few <!--I've worked with that are -->as dedicated as Aaron is to his craft and it makes everything operate smoothly."
           </p>
-          <!-- <a class="testimonial-img-link"href="https://x.com/Skrioftw?t=Lb7U6PgcetotBaqTtOX_1Q&s=09" target="_blank"><img src="img/" class="testimonial-img" alt="Skrioftw"></a> -->
+          <!-- <a class="testimonial-img-link grow-hover"href="https://x.com/Skrioftw?t=Lb7U6PgcetotBaqTtOX_1Q&s=09" target="_blank"><img src="img/" class="testimonial-img" alt="Skrioftw"></a> -->
           <div class="chakra testimonial-name">
             <p>Saverio Kijewski |</p>
             <a href="https://www.youtube.com/channel/UCNlH3OfDuyziyUtmLzt7-Ww" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -1090,7 +1331,7 @@
           <p class="code testimonial-text">
             "Aaron is a very skilled music producer. He has a flexible ear and works with criticism well. But I think the best part of working with him is that he's so laid back. He makes making music fun! You can hear it in every track."
           </p>
-          <!-- <a class="testimonial-img-link"href="https://open.spotify.com/artist/1t7OHIsnMhS0XaBHpsK5EB" target="_blank"><img src="img/" class="testimonial-img" alt="Proctomancer"></a> -->
+          <!-- <a class="testimonial-img-link grow-hover"href="https://open.spotify.com/artist/1t7OHIsnMhS0XaBHpsK5EB" target="_blank"><img src="img/" class="testimonial-img" alt="Proctomancer"></a> -->
           <div class="chakra testimonial-name">
             <p>Christian Martin |</p>
             <a href="https://open.spotify.com/artist/1t7OHIsnMhS0XaBHpsK5EB" target="_blank"><i class="fab fa-spotify"></i></a>
