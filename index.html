@@ -759,8 +759,11 @@
     }
 
     .side-item a img{
-      
       width: 100%;
+    }
+    .side-item a video{
+      width: 100%;
+      margin: 0;
     }
 
     .rect-side{
@@ -1397,7 +1400,13 @@
 
     <div class="center-content side-container">
       <div class="side-item">
-        <a href="https://aaron-f-bianchi.itch.io/actual-3d-sudoku" target="_blank"><img src="img/side/3dsudoku-side-line.svg" alt="Actual 3D Sudoku Game"></a>
+        <a href="https://aaron-f-bianchi.itch.io/actual-3d-sudoku" target="_blank">
+          <!-- <img src="img/side/3dsudoku-side-line.svg" alt="Actual 3D Sudoku Game"> -->
+          <video autoplay muted loop playsinline>
+            <source src="img/side/3dsudoku-side-line.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </a>
         <div class="rect-side">
           <p class="chakra side-item-title">"Actual 3D Sudoku"</p>
           <p class="code side-item-desc">Fun, little, not-as-scary-as-it-looks, 3D sudoku puzzle game.</p>
@@ -1409,7 +1418,13 @@
       </div>
 
       <div class="side-item">
-        <a href="https://github.com/aaronfbianchi/LSaO-visualizer" target="_blank"><img src="img/side/lsao_icon.svg" alt="Linear Spectrum and Oscilloscope Visualizer"></a>
+        <a href="https://github.com/aaronfbianchi/LSaO-visualizer" target="_blank">
+          <!-- <img src="img/side/lsao_icon.svg" alt="Linear Spectrum and Oscilloscope Visualizer"> -->
+          <video autoplay muted loop playsinline>
+            <source src="img/side/lsao_demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </a>
         <div class="rect-side">
           <p class="chakra side-item-title">"LSaO Visualizer"</p>
           <p class="code side-item-desc">Linear spectrum and osciloscope audio visualization tool.</p>
