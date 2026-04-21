@@ -48,7 +48,6 @@
       background-color: var(--bg);
       color: var(--clear);
       margin: 0px;
-      overflow-x: hidden;
     }
 
     h1 {
@@ -144,7 +143,6 @@
       justify-content: space-between;
       align-items: center;
       background: var(--bg);
-      border-bottom: 1px solid var(--clear);
     }
 
     .links-bar a {
@@ -155,6 +153,10 @@
 
     .links-bar a:hover {
       color: var(--acc-rojo);
+    }
+  
+    .white-line{
+      border-bottom: 1px solid var(--clear);
     }
 
     .hide-on-small{
@@ -168,12 +170,18 @@
       }
     }
 
-    .sticky-section {
+    .header {
+      margin: 0;
+      position: sticky;
+      top: 0;
+      background-color: var(--bg);
+      z-index: 100;
+    }
+
+    .header-content{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: sticky;
-      top: 0; /* se va a quedar pegadazo como chicle cuando se quede a 0px del margen de arriba */
       background-color: var(--bg);
       color: var(--clear);
       padding: 8px;
@@ -927,17 +935,18 @@
     </div>
   </div>
 
-  <div style="position: sticky; align-self: center; top: 0; background: var(--bg); z-index: 100;">
-    <div class="center-content sticky-section">
-      <h1><a href="#body" style="color:var(--acc-azul); text-decoration:none;" class="chakra">Aaron F. Bianchi</a></h1>
-      <div class="code links-r">
-        <a href="#demo-reel">Portfolio</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </div>
+  <div class="white-line"></div>
 
+  <header id="header" class="header">
+      <div class="center-content header-content">
+        <h1><a href="#body" style="color:var(--acc-azul); text-decoration:none;" class="chakra">Aaron F. Bianchi</a></h1>
+        <div class="code links-r">
+          <a href="#demo-reel">Portfolio</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+  </header>
 
   <div class="video-background">
     <video autoplay muted loop playsinline>
@@ -1239,7 +1248,7 @@
         <p class="code testimonial-text">
           "Aaron is a very dedicated composer capable of adapting to any style. In addition to being fast, he is always surprising with new ideas for the future of any given project."
         </p>
-        <a class="testimonial-img-link grow-hover"href="https://x.com/thelenoax?s=09" target="_blank"><img src="img/lenoax.jpg" class="testimonial-img" alt="Lenoax"></a>
+        <a class="testimonial-img-link grow-hover"href="https://x.com/thelenoax?s=09" target="_blank"><img src="img/lenoax.png" class="testimonial-img" alt="Lenoax"></a>
         <div class="chakra testimonial-name">
           <p>Sebastián Ignacio Román |</p>
           <a href="https://www.youtube.com/@Lenoax" target="_blank"><i class="fab fa-youtube"></i></a>
