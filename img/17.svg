@@ -88,7 +88,7 @@
   </svg:defs>
   <svg:use
      xlink:href="#outer"
-     style="display:inline;fill:none;stroke:#ffffff;stroke-width:0.005;stroke-dasharray:none"
+     style="display:inline;fill:none;stroke:#ffffff;stroke-width:0.01;stroke-dasharray:none"
      id="use1"
      transform="translate(-0.00210231,-0.00210231)" />
   <svg:g

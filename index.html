@@ -755,6 +755,7 @@
       flex-direction: row;
       justify-content:space-evenly;
       align-items:center;
+      flex-wrap: wrap;
     }
 
     .side-item{
@@ -762,8 +763,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 25%;
+      width: 40%;
       transition: width 0.1s ease;
+      margin: 30px 0px;
     }
 
     .side-item a img{
@@ -813,6 +815,9 @@
       width: 20px;
       height: 20px;
     }
+    .side-item-links i{
+      font-size: 20px;
+    }
 
     @media (max-width: 1199px) {
       .side-container{
@@ -820,6 +825,9 @@
       }
       .side-item{
         width: 40%;
+      }
+      .side-item{
+        margin: 20px 0px;
       }
     }
     @media (max-width: 1000px) {
@@ -830,7 +838,11 @@
       .side-item{
         width: 60%;
       }
+      .side-item{
+        margin: 10px 0px;
+      }
     }
+
 
     /*---------------------------------*/
 
@@ -1220,7 +1232,7 @@
           <img src="img/portfolio/hellhacker.jpg" alt="Hellhacker Album">
           <div class="overlay-text chakra">
             <h5>"Hellhacker"</h5>
-            <h4>Synthy doom-ish track for the end of times.</h4>
+            <h4>Synthy doom-ish track for the end of time.</h4>
           </div>
         </a>
       </div>
@@ -1423,7 +1435,7 @@
           <p class="chakra side-item-title">"Actual 3D Sudoku"</p>
           <p class="code side-item-desc">Fun, little, not-as-scary-as-it-looks, 3D sudoku puzzle game.</p>
           <div class="side-item-links">
-            <a href="https://youtu.be/8OPTOuD62Gw?si=z01a3mPn_3MRM5SA" target="_blank"><img src="img/yt.svg" alt="youtube icon"></a>
+            <a href="https://youtu.be/8OPTOuD62Gw?si=z01a3mPn_3MRM5SA" target="_blank"><i class="fab fa-youtube"></i></a>
             <a href="https://aaron-f-bianchi.itch.io/actual-3d-sudoku" target="_blank"><img src="https://itch.io/favicon.ico" alt="Itch.io"></a>
           </div>
         </div>
@@ -1441,8 +1453,8 @@
           <p class="chakra side-item-title">"LSaO Visualizer"</p>
           <p class="code side-item-desc">Linear spectrum and osciloscope audio visualization tool.</p>
           <div class="side-item-links">
-            <a href="https://youtu.be/IIGqghktYas?si=c-XgMkxPP-XgNivS" target="_blank"><img src="img/yt.svg" alt="youtube icon"></a>
-            <a href="https://github.com/aaronfbianchi/LSaO-visualizer" target="_blank"><img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub icon"></a>
+            <a href="https://youtu.be/IIGqghktYas?si=c-XgMkxPP-XgNivS" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://github.com/aaronfbianchi/LSaO-visualizer" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://codeberg.org/aaronfbianchi/LSaO-visualizer" target="_blank"><img src="https://codeberg.org/Codeberg/Design/raw/branch/main/logo/icon/svg/codeberg-logo_icon_blue.svg" alt="Codeberg icon"></a>
             <a href="https://aaron-f-bianchi.itch.io/lsao" target="_blank"><img src="https://itch.io/favicon.ico" alt="Itch.io"></a>
           </div>
@@ -1461,15 +1473,53 @@
           <p class="chakra side-item-title">This freaking page!!!</p>
           <p class="code side-item-desc">I wrote this page with no JavaScript. HTML and CSS only. Just for fun!</p>
           <div class="side-item-links">
-            <a href="https://github.com/aaronfbianchi/aaronfbianchi.github.io" target="_blank"><img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub icon"></a>
+            <a href="https://github.com/aaronfbianchi/aaronfbianchi.github.io" target="_blank"><i class="fab fa-github"></i></a>
             <!--a href="https://aaronfbianchi.github.io/" target="_blank"><img src="img/side/big_icon_vectorial.svg" alt="aaronfbianchi icon"></a-->
           </div>
         </div>
       </div>
+
+      <div class="side-item">
+        <a href="https://justfuckingusehtml.com/es-PE" target="_blank">
+          <img src="img/side/jfuh-esPE.svg" alt="">
+        </a>
+        <div class="rect-side">
+          <p class="chakra side-item-title">"JFUH (es-PE)"</p>
+          <p class="code side-item-desc">Peruvian spanish translation of the <em>Just Fucking Use HTML</em> website.</p>
+          <div class="side-item-links">
+            <a href="https://justfuckingusehtml.com/es-PE" target="_blank"><i class="fas fa-globe"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
+
   </section>
 
-  <section id="contact">
+  <!-- <section id="other-things">
+    <div class="center-content" style="margin-top: 0px;">
+      <h3 class="chakra">OTHER THINGS I DID</h3>
+      <div class="small-line"></div>
+      <p class="section-desc code">Basically, same as the previous section but less important. I'm even using the same code so it looks the same.</p>
+    </div>
+
+    <div class="center-content side-container">
+      <div class="side-item">
+        <a href="https://justfuckingusehtml.com/es-PE" target="_blank">
+          <img src="img/side/jfuh-esPE.svg" alt="">
+        </a>
+        <div class="rect-side">
+          <p class="chakra side-item-title">"JFUH (es-PE)"</p>
+          <p class="code side-item-desc">Peruvian spanish translation of the <em>Just Fucking Use HTML</em> website.</p>
+          <div class="side-item-links">
+            <a href="https://justfuckingusehtml.com/es-PE" target="_blank"><i class="fas fa-globe"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <footer id="contact">
     <div class="center-content" style="margin-top: 0px;">
       <h3 class="chakra">CONTACT</h3>
       <div class="small-line"></div>
