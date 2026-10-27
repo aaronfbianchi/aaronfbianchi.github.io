@@ -20,11 +20,11 @@
 }
 
 *{
-    background-color: var(--bg);
     color: var(--fg);
 }
 
 html {
+    background-color: var(--bg);
     scroll-behavior: smooth;
     font-size: 18px;
     overflow-x: hidden;
@@ -119,17 +119,19 @@ header p{
 nav{
     position: sticky;
     top: 0;
+    z-index: 999;
+    background: var(--bg);
+}
+.nav-cont{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px 0px;
-    background: var(--bg);
     border-bottom: 1px solid var(--border);
     padding: 0.75rem 0;
     margin-bottom: 2rem;
-    z-index: 10;
 }
-nav a {
+.nav-cont a {
     text-justify: center;
     color: var(--gris);
     margin-right: 36px;
@@ -138,7 +140,7 @@ nav a {
     letter-spacing: 0.05em;
     text-decoration: none;
 }
-nav a:hover{
+.nav-cont a:hover{
     color: var(--rojo);
 }
 
@@ -154,6 +156,9 @@ h2 {
     border-bottom: 1px solid var(--border);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+}
+h3{
+    font-size: 1.5rem;
 }
 
 .new-section{
@@ -228,11 +233,11 @@ p{
     object-fit: contain;
     flex-shrink: 0;
     /* opacity: 0.8; */
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .carousel-track a img:hover {
-    opacity: 1;
+    /* opacity: 1; */
     transform: scale(105%);
 }
 
@@ -256,3 +261,199 @@ p{
     transform: translateX(calc(-100vw/var(--carr-div)*5));
     }
 }
+
+/* PORTFOLIO ////////////////////////////////////////////////////////////// */
+
+.container-portfolio{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-17{
+    opacity: 0;
+    transform: scale(0);
+}
+
+.grid-17 img{
+    z-index: -100;
+    width:100%; 
+    position:absolute; 
+}
+
+.check-text{
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.check-text:hover{
+    color: var(--acc-rojo);
+}
+
+.item-portfolio{
+    width: 25%;
+    border: 0px solid var(--fg);
+    box-sizing: border-box;
+    transition: transform 0.1s ease, width 0.1s ease, border 0.1s ease;
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+    .item-portfolio{
+        width: 33.3333333%;
+    }
+    .box-hidden-2{
+        width: 0;
+    }
+}
+@media (min-width: 730px) and (max-width: 900px) {
+    .item-portfolio{
+        width: 50%;
+    }
+}
+@media (max-width: 730px) {
+    .item-portfolio{
+        width: 100%;
+    }
+}
+
+.box-hidden{
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
+#portfolio:has(#style-switch:checked) .item-portfolio {
+    width: 21.39037%;
+    border: 3px solid var(--fg);
+}
+#portfolio:has(#style-switch:checked) .box-hidden {
+    width: 21.39037%;
+}
+#portfolio:has(#style-switch:checked) .box-hidden-2 {
+    width: 21.39037%;
+}
+#portfolio:has(#style-switch:checked) .grid-17 {
+    transform: scale(1);
+    opacity: 1;
+}
+#portfolio:has(#style-switch:checked) .overlay-text {
+    text-size-adjust: 100%;
+}
+@media (min-width: 1000px) and (max-width: 1500px) {
+    #portfolio:has(#style-switch:checked) h3 {
+    font-size: 22px;
+    }
+    #portfolio:has(#style-switch:checked) p {
+    font-size: 18px;
+    }
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+    #portfolio:has(#style-switch:checked) h3 {
+    font-size: 18px;
+    }
+    #portfolio:has(#style-switch:checked) p {
+    font-size: 14px;
+    }
+}
+@media (max-width: 800px) {
+    #portfolio:has(#style-switch:checked) h3 {
+    font-size: 16px;
+    }
+    #portfolio:has(#style-switch:checked) p {
+    font-size: 12px;
+    }
+}
+
+#portfolio:has(#style-switch:checked) .box01 {
+    transform: translateX(0);
+}
+#portfolio:has(#style-switch:checked) .box02 {
+    transform: translateX(0);
+}
+#portfolio:has(#style-switch:checked) .box03 {
+    transform: translateX(67.4%);
+}
+#portfolio:has(#style-switch:checked) .box04 {
+    transform: translateX(67.4%);
+}
+#portfolio:has(#style-switch:checked) .box05 {
+    transform: translateX(0);
+}
+#portfolio:has(#style-switch:checked) .box06 {
+    transform: translateX(5.7%) translateY(61.2%) rotate(-50.1deg);
+}
+#portfolio:has(#style-switch:checked) .box07 {
+    transform: translateX(-20.6%) translateY(-7.4%) rotate(-50.1deg);
+}
+#portfolio:has(#style-switch:checked) .box08 {
+    transform: translateX(67.4%) translateY(0) rotate(0);
+}
+#portfolio:has(#style-switch:checked) .box09 {
+    transform: translateX(20.4%) translateY(20.3%) rotate(-50.1deg);
+}
+#portfolio:has(#style-switch:checked) .box10 {
+    transform: translateX(-6.3%) translateY(88.7%) rotate(-50.1deg);
+}
+#portfolio:has(#style-switch:checked) .box11 {
+    transform: translateX(-21.2%) translateY(29.6%) rotate(-50.1deg);
+}
+#portfolio:has(#style-switch:checked) .box12 {
+    transform: translateX(-47.3%) translateY(-39%) rotate(-50.1deg);
+}
+#portfolio:has(#style-switch:checked) .box13 {
+    transform: translateX(367.4%) translateY(-88.6%) rotate(0);
+}
+#portfolio:has(#style-switch:checked) .box14 {
+    transform: translateX(174.6%) translateY(-12.8%) rotate(-36.6deg);
+}
+#portfolio:has(#style-switch:checked) .box15 {
+    transform: translateX(-15.4%) translateY(67.4%);
+}
+#portfolio:has(#style-switch:checked) .box16 {
+    transform: translateX(67.4%) translateY(67.4%);
+}
+#portfolio:has(#style-switch:checked) .box17 {
+    transform: translateX(0) translateY(-32.6%);
+}
+
+.image-overlay-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    overflow: hidden;
+    color: var(--fg);
+}
+
+.image-overlay-container img {
+    width: 100%;
+    opacity: 1;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    height: auto;
+}
+
+.image-overlay-container:hover img {
+    transform: scale(1.05);
+    opacity: 0.25;
+}
+
+.overlay-text {
+    position: absolute;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    transition: opacity 0.2s ease;
+    opacity:0;
+}
+
+.overlay-text p{
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-top: 8%;
+    color: var(--fg);
+}
+
+.image-overlay-container:hover .overlay-text {
+    opacity: 1;
+}
+
+/*---------------------------------*/
