@@ -7,6 +7,12 @@
     font-family: "Source Code Pro", sans-serif;
     text-size-adjust: 140%;
 }
+.no-scale{
+    text-size-adjust: 100%;
+}
+.more-scale{
+    text-size-adjust: 160%;
+}
 
 :root {
     --rojo: #ff2020;
@@ -54,6 +60,7 @@ header{
     border-bottom: 2px var(--rojo) solid;
 }
 h1{
+    text-size-adjust: 100%;
     font-size: 52px;
     margin: 5px 0;
 }
@@ -341,7 +348,7 @@ p{
     opacity: 1;
 }
 #portfolio:has(#style-switch:checked) .overlay-text {
-    text-size-adjust: 100%;
+    text-size-adjust: 140%;
 }
 @media (min-width: 1000px) and (max-width: 1500px) {
     #portfolio:has(#style-switch:checked) h3 {
@@ -493,7 +500,7 @@ p{
 }
 .testimonial-text{
     background-color: var(--art);
-    
+    text-size-adjust: 140%;
     height: 100%;
     /* max-width: 71%; */
 }
