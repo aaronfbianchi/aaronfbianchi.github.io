@@ -92,19 +92,7 @@ header p{
     padding: 10px 0px 0px 0px;
     margin:auto;
 }
-@media (max-width: 1200px) {
-    .flex-header{
-        display: block;
-    }
-    .flex-header .links-header{
-        margin-top: 20px;
-        justify-content: left;
-        width: 100%;
-    }
-    :root {
-        --carr-div: 2;
-    }
-}
+
 .flex-header .links-header a{
     width: 52px;
     height: 50px;
@@ -122,12 +110,36 @@ header p{
 }
 .flex-header .links-header a i{
     font-size: 35px;
+    /* line-height: 2; */
+    /* text-size-adjust: 180%; */
     margin: auto;
 }
 .flex-header .links-header a:hover i{
     transform: scale(1.2);
 }
-
+@media (max-width: 1200px) {
+    .flex-header{
+        display: block;
+    }
+    .flex-header .links-header{
+        margin-top: 20px;
+        justify-content: left;
+        width: 100%;
+    }
+    .flex-header .links-header a{
+    width: 70px;
+    height: 60px;
+    }
+    .flex-header .links-header a i{
+        font-size: 50px;
+    }
+    .flex-header .links-header a img{
+        width: 50px;
+    }
+    :root {
+        --carr-div: 2;
+    }
+}
 nav{
     position: sticky;
     top: 0;
