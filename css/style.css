@@ -1,17 +1,17 @@
 .chakra {
     font-family: "Chakra Petch", sans-serif;
-    text-size-adjust: 140%;
+    text-size-adjust: 150%;
 }
 
 .code {
     font-family: "Source Code Pro", sans-serif;
-    text-size-adjust: 140%;
+    text-size-adjust: 150%;
 }
 .no-scale{
     text-size-adjust: 100%;
 }
 .more-scale{
-    text-size-adjust: 160%;
+    text-size-adjust: 200%;
 }
 
 :root {
@@ -92,7 +92,7 @@ header p{
     padding: 10px 0px 0px 0px;
     margin:auto;
 }
-@media (max-width: 730px) {
+@media (max-width: 1080px) {
     .flex-header{
         display: block;
     }
@@ -209,7 +209,7 @@ p{
     content: "> ";
     color: var(--rojo);
 }
-@media (max-width: 730px) {
+@media (max-width: 1080px) {
     .flex-about{
         display: block;
     }
@@ -347,7 +347,7 @@ p{
     opacity: 1;
 }
 #portfolio:has(#style-switch:checked) .overlay-text {
-    text-size-adjust: 140%;
+    text-size-adjust: 110%;
 }
 @media (min-width: 1000px) and (max-width: 1500px) {
     #portfolio:has(#style-switch:checked) h3 {
