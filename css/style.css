@@ -1,11 +1,11 @@
 .chakra {
     font-family: "Chakra Petch", sans-serif;
-    /* text-size-adjust: 130%; */
+    text-size-adjust: 140%;
 }
 
 .code {
     font-family: "Source Code Pro", sans-serif;
-    /* text-size-adjust: 130%; */
+    text-size-adjust: 140%;
 }
 
 :root {
@@ -130,16 +130,16 @@ nav{
     flex-wrap: wrap;
     gap: 10px 0px;
     border-bottom: 1px solid var(--border);
-    padding: 0.75rem 0;
-    margin-bottom: 2rem;
+    padding: 12px 0;
+    margin-bottom: 32px;
 }
 .nav-cont a {
     text-justify: center;
     color: var(--gris);
     margin-right: 36px;
-    font-size: 0.85rem;
+    font-size: 14px;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.8px;
     text-decoration: none;
 }
 .nav-cont a:hover{
@@ -152,15 +152,15 @@ h2::before {
 }
 
 h2 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
+    font-size: 22px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
     border-bottom: 1px solid var(--border);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.8px;
 }
 h3{
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 
 .new-section{
@@ -448,7 +448,7 @@ p{
 }
 
 .overlay-text p{
-    font-size: 1.2rem;
+    font-size: 20px;
     font-weight: normal;
     margin-top: 8%;
     color: var(--fg);
@@ -461,24 +461,25 @@ p{
 /* TESTIMONIALS ////////////////////////////////////////////////////////////// */
 
 .flex-testimonials{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* gap: 20px; */
 }
 .item-testimonial{
-    display: flex;
+    /* display: flex; */
     font-style: italic;
-    align-items: center;
-    /* gap: 20px; */
-    justify-content: space-between;
+    /* align-items: center; */
+    gap: 20px;
+    /* justify-content: space-between; */
 }
 .testimonial-img{
     width: 22%;
+    aspect-ratio: 1;
     /* height: 0; */
     /* padding-bottom: 25%; */
     display: flex;
-    border: var(--rojo) 4px solid;
+    border: var(--rojo) 3px solid;
 }
 .testimonial-img img{
     width: 80%;
@@ -488,9 +489,9 @@ p{
 }
 .testimonial-text{
     background-color: var(--art);
-    padding: 0px 18px;
+    
     height: 100%;
-    max-width: 71%;
+    /* max-width: 71%; */
 }
 .testimonial-text .testimonial{
     color: var(--fg);
@@ -524,3 +525,4 @@ p{
 .testimonial-aka p a:hover{
     color: var(--rojo);
 }
+
