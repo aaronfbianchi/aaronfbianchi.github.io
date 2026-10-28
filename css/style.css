@@ -1,11 +1,11 @@
 .chakra {
     font-family: "Chakra Petch", sans-serif;
-    text-size-adjust: 100%;
+    text-size-adjust: 140%;
 }
 
 .code {
     font-family: "Source Code Pro", sans-serif;
-    text-size-adjust: 100%;
+    text-size-adjust: 140%;
 }
 
 :root {
@@ -22,9 +22,6 @@
 
 *{
     color: var(--fg);
-    /* box-sizing: border-box;
-    margin: 0;
-    padding: 0; */
 }
 
 html {
