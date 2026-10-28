@@ -92,7 +92,7 @@ header p{
     padding: 10px 0px 0px 0px;
     margin:auto;
 }
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
     .flex-header{
         display: block;
     }
@@ -209,7 +209,7 @@ p{
     content: "> ";
     color: var(--rojo);
 }
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
     .flex-about{
         display: block;
     }
