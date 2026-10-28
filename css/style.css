@@ -60,7 +60,6 @@ header{
     border-bottom: 2px var(--rojo) solid;
 }
 h1{
-    text-size-adjust: 100%;
     font-size: 52px;
     margin: 5px 0;
 }
@@ -500,7 +499,6 @@ p{
 }
 .testimonial-text{
     background-color: var(--art);
-    text-size-adjust: 140%;
     height: 100%;
     /* max-width: 71%; */
 }
