@@ -13,6 +13,9 @@
 .more-scale{
     text-size-adjust: 200%;
 }
+.super-scale{
+    text-size-adjust: 250%;
+}
 
 :root {
     --rojo: #ff2020;
@@ -40,7 +43,7 @@ html {
 body{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     width: 100%;
     min-height: 100vh;
 }
@@ -86,11 +89,12 @@ header p{
 .flex-header .links-header{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
     justify-content: right;
     width: 35%;
     padding: 10px 0px 0px 0px;
-    margin:auto;
+    margin:auto 0px;
 }
 
 .flex-header .links-header a{
@@ -149,8 +153,9 @@ nav{
 .nav-cont{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px 0px;
+    gap: 10px 10px;
     border-bottom: 1px solid var(--border);
     padding: 12px 0;
     margin-bottom: 32px;
@@ -158,7 +163,7 @@ nav{
 .nav-cont a {
     text-justify: center;
     color: var(--gris);
-    margin-right: 36px;
+    /* margin-right: 36px; */
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.8px;
@@ -530,7 +535,11 @@ p{
     display: flex;
     flex-direction: row;
     align-items: center;
+    /* line-height: 2; */
     gap: 5px;
+}
+.testimonial-socials *{
+    margin-right: 0.5em;
 }
 .testimonial-socials a i:hover{
     color: var(--rojo);
