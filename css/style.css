@@ -63,11 +63,11 @@ header{
     border-bottom: 2px var(--rojo) solid;
 }
 @keyframes glitch {
-    0%, 100% { text-shadow: 1px 0 var(--rojo), -1px 0 #0ff; }
-    20% { text-shadow: -1px 0 var(--rojo), 1px 0 #0ff; }
-    40% { text-shadow: 1px 1px var(--rojo), -1px -1px #0ff; }
-    60% { text-shadow: -1px -1px var(--rojo), 1px 1px #0ff; }
-    80% { text-shadow: 1px -1px var(--rojo), -1px 1px #0ff; }
+    0%, 100% { text-shadow: 1.5px 0 var(--rojo), -1.5px 0 #0ff; }
+    20% { text-shadow: -1.5px 0 var(--rojo), 1.5px 0 #0ff; }
+    40% { text-shadow: 1.5px 1.5px var(--rojo), -1.5px -1.5px #0ff; }
+    60% { text-shadow: -1.5px -1.5px var(--rojo), 1.5px 1.5px #0ff; }
+    80% { text-shadow: 1.5px -1.5px var(--rojo), -1.5px 1.5px #0ff; }
 }
 h1{
     font-size: 52px;
