@@ -62,9 +62,17 @@ header{
     padding: 30px 0px;
     border-bottom: 2px var(--rojo) solid;
 }
+@keyframes glitch {
+    0%, 100% { text-shadow: 1px 0 var(--rojo), -1px 0 #0ff; }
+    20% { text-shadow: -1px 0 var(--rojo), 1px 0 #0ff; }
+    40% { text-shadow: 1px 1px var(--rojo), -1px -1px #0ff; }
+    60% { text-shadow: -1px -1px var(--rojo), 1px 1px #0ff; }
+    80% { text-shadow: 1px -1px var(--rojo), -1px 1px #0ff; }
+}
 h1{
     font-size: 52px;
     margin: 5px 0;
+    animation: glitch 0.5s infinite;
 }
 header h1 span {
     color: var(--rojo);
@@ -225,6 +233,8 @@ p{
 .list p::before{
     content: "> ";
     color: var(--rojo);
+    font-weight: bold;
+    margin: 0 10px 0 5px;
 }
 @media (max-width: 1200px) {
     .flex-about{
@@ -486,73 +496,4 @@ p{
 }
 
 /* TESTIMONIALS ////////////////////////////////////////////////////////////// */
-
-.flex-testimonials{
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* flex-wrap: wrap; */
-    /* gap: 20px; */
-}
-.item-testimonial{
-    /* display: flex; */
-    font-style: italic;
-    /* align-items: center; */
-    gap: 20px;
-    /* justify-content: space-between; */
-}
-.testimonial-img{
-    width: 22%;
-    aspect-ratio: 1;
-    /* height: 0; */
-    /* padding-bottom: 25%; */
-    display: flex;
-    border: var(--rojo) 3px solid;
-}
-.testimonial-img img{
-    width: 80%;
-    margin: 10%;
-    align-items: center;
-
-}
-.testimonial-text{
-    background-color: var(--art);
-    height: 100%;
-    /* max-width: 71%; */
-}
-.testimonial-text .testimonial{
-    color: var(--fg);
-    font-size: 16px;
-}
-.testimonial-text .testimonial-name{
-    color: var(--fg);
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    /* padding: 0px 10px; */
-    margin: 0;
-}
-.testimonial-socials{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* line-height: 2; */
-    gap: 5px;
-}
-.testimonial-socials *{
-    margin-right: 0.5em;
-}
-.testimonial-socials a i:hover{
-    color: var(--rojo);
-}
-.testimonial-aka p{
-    margin: 10px 0px;
-    font-size: 14px;
-    font-style: normal;
-}
-.testimonial-aka p a{
-    font-weight: bold;
-}
-.testimonial-aka p a:hover{
-    color: var(--rojo);
-}
 
