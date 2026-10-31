@@ -574,3 +574,67 @@ p{
 }
 
 /* SIDE PROJECTS ////////////////////////////////////////////////////////////// */
+.contenedor-side{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+.side-item{
+    width: 45%;
+}
+.side-item .side-video{
+    border: var(--rojo) 2px solid;
+    width: 100%;
+    aspect-ratio: 600/680;
+    margin-bottom: 10px;
+}
+
+.side-video video{
+    width: 100%;
+}
+.side-video img{
+    width: 100%;
+}
+
+
+.side-card{
+    width: 100%;
+    border: var(--rojo) 2px solid;
+    background-color: var(--art);
+}
+.side-card *{
+    margin: 0;
+    color: var(--fg);
+}
+.side-card h3{
+    padding: 15px 15px 5px 15px;
+}
+.side-card p{
+    padding: 5px 15px 10px 15px;
+    font-style: italic;
+}
+.side-links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 5px 15px 15px 15px;
+}
+.side-links a{
+    border: var(--fg) 2px solid;
+    font-style: normal;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 14px;
+}
+.side-links a:hover{
+    border: var(--fg) 2px solid;
+    background-color: var(--fg);
+    color: var(--bg);
+}
+.side-links a:hover i{
+    background-color: var(--fg);
+    color: var(--bg);
+}
