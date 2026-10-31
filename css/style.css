@@ -566,7 +566,7 @@ p{
     color: var(--rojo);
 }
 .testimonial-text{
-    text-size-adjust: 250%;
+    text-size-adjust: 200%;
     color:var(--fg);
     font-style: italic;
     margin-top: 0;
