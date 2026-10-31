@@ -172,7 +172,7 @@ nav{
     text-justify: center;
     color: var(--gris);
     /* margin-right: 36px; */
-    font-size: 14px;
+    font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 0.8px;
     text-decoration: none;
@@ -306,6 +306,12 @@ p{
 .container-portfolio{
     display: flex;
     flex-wrap: wrap;
+}
+.desc_portfolio{
+    margin: 18px 0px;
+}
+.desc_portfolio p{
+    margin: 0;
 }
 
 .grid-17{
@@ -580,6 +586,7 @@ p{
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
+    margin-top: 30px;
 }
 .side-item{
     width: 45%;
@@ -639,6 +646,15 @@ p{
     background-color: var(--fg);
     color: var(--bg);
 }
-.side-item *{
+/* .side-item *{
     text-size-adjust: 115%;
+} */
+
+@media (max-width: 1200px){
+    .contenedor-side{
+        flex-direction: column;
+    }
+    .side-item{
+        width: 100%;
+    }
 }
