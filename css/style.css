@@ -578,7 +578,7 @@ p{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 30px;
     justify-content: center;
 }
 .side-item{
@@ -628,6 +628,7 @@ p{
     text-decoration: none;
     padding: 10px;
     font-size: 14px;
+    font-weight: bold;
 }
 .side-links a:hover{
     border: var(--fg) 2px solid;
@@ -637,4 +638,7 @@ p{
 .side-links a:hover i{
     background-color: var(--fg);
     color: var(--bg);
+}
+.side-item *{
+    text-size-adjust: 115%;
 }
