@@ -24,7 +24,7 @@
     --fg: #fff;
     --gris: #999;
     --border:#222;
-    --art: #0a0a0a;
+    --art: #0b0b0b;
     --carr-div: 3;
     --strm-div: 6;
 }
@@ -64,9 +64,9 @@ header{
 }
 @keyframes glitch {
     0%, 100% { text-shadow: 1.5px 0 var(--rojo), -1.5px 0 #0ff; }
-    20% { text-shadow: -1.5px 0 var(--rojo), 1.5px 0 #0ff; }
+    30% { text-shadow: -1.5px 0 var(--rojo), 1.5px 0 #0ff; }
     40% { text-shadow: 1.5px 1.5px var(--rojo), -1.5px -1.5px #0ff; }
-    60% { text-shadow: -1.5px -1.5px var(--rojo), 1.5px 1.5px #0ff; }
+    70% { text-shadow: -1.5px -1.5px var(--rojo), 1.5px 1.5px #0ff; }
     80% { text-shadow: 1.5px -1.5px var(--rojo), -1.5px 1.5px #0ff; }
 }
 h1{
@@ -497,3 +497,74 @@ p{
 
 /* TESTIMONIALS ////////////////////////////////////////////////////////////// */
 
+.testimonials{
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; */
+    column-count: 2;
+    column-gap: 20px;
+    /* max-height: 150vh; */
+}
+
+.testimonial-item{
+    overflow: auto;
+    break-inside: avoid;
+    /* width: 45%; */
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--art);
+}
+@media (max-width:1200px) {
+    .testimonials{
+    column-count: 1;
+    }
+}
+
+.testimonial-name{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    margin: 0;
+}
+.testimonial-name *{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.testimonial-name a i:hover{
+    color:var(--rojo);
+}
+
+.testimonial-item img{
+    padding: 10px;
+    width: 25%;
+    border: 2px var(--rojo) solid;
+    float: left;
+    margin-right: 20px; 
+    margin-bottom: 10px;
+}
+.testimonial-aka{
+    font-weight: light;
+    font-style: italic;
+    color:var(--gris);
+}
+.testimonial-aka p{
+    margin-top: 5px 0;
+}
+.testimonial-aka b{
+    color:var(--gris);
+}
+.testimonial-aka a{
+    text-decoration: underline;
+    color: var(--fg);
+}
+.testimonial-aka a:hover{
+    color: var(--rojo);
+}
+.testimonial-text{
+    color:var(--fg);
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0px;
+}
