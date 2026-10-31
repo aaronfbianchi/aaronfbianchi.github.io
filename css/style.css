@@ -452,6 +452,9 @@ p{
 #portfolio:has(#style-switch:checked) .box17 {
     transform: translateX(0) translateY(-32.6%);
 }
+#portfolio:has(#style-switch:checked) .container-portfolio {
+    height: 100vw;
+}
 
 .image-overlay-container {
     position: relative;
@@ -568,3 +571,5 @@ p{
     margin-top: 0;
     margin-bottom: 0px;
 }
+
+/* SIDE PROJECTS ////////////////////////////////////////////////////////////// */
