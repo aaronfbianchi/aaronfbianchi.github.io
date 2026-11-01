@@ -658,3 +658,133 @@ p{
         width: 100%;
     }
 }
+
+/* STREAMING ////////////////////////////////////////////////////////////// */
+
+.contenedor-streaming{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top:40px;
+    justify-content: center;
+}
+.contenedor-streaming a{
+    /* border: var(--rojo) 2px solid; */
+    text-decoration: none;
+}
+.contenedor-streaming a i{
+    font-size: 120px;
+    text-size-adjust: 100%;
+}
+.contenedor-streaming a img{
+    height: 115px;
+    aspect-ratio: 112.5/90;
+    display: block;
+}
+.contenedor-streaming a p{
+    color:var(--fg);
+    text-align: center;
+}
+
+/* CONTACT ////////////////////////////////////////////////////////////// */
+
+.contenedor-contact{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top:40px;
+    justify-content: space-between;
+}
+
+.contact-item{
+    width: 30%;
+    display:flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+}
+.contact-item *{
+    margin:5px;
+}
+.contact-item i{
+    font-size: 120px;
+    text-size-adjust: 100%;
+    text-align: center;
+}
+.contact-item img{
+    height: 120px;
+    aspect-ratio: 112.5/90;
+    display: block;
+}
+.contact-item .contact-service{
+    color:var(--fg);
+    text-align: center;
+}
+.contact-item p img{
+    filter: invert(1);
+}
+.contact-item a{
+    color:var(--gris);
+    text-align: center;
+}
+.contact-item a:hover{
+    color:var(--rojo);
+}
+.contact.info{
+    color:var(--gris);
+}
+
+
+
+/* FOOTER ////////////////////////////////////////////////////////////// */
+
+.copyright{
+    margin:100px;
+    text-align: center;
+    font-size: 18px;
+}
+.copyright strong{
+    color:var(--rojo);
+}
+
+.video-container{
+    display:flex;
+    align-items: center;
+}
+
+.footer{
+    position:absolute;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: -100;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+/* FOOTER ////////////////////////////////////////////////////////////// */
+
+.fixed-button {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    width: 50px;
+    height: 40px;
+    padding: 0px;
+    padding-top: 10px;
+    border: var(--rojo) 3px solid;
+    background-color: #000000bb;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--rojo);
+    z-index: 1000;
+    text-align: center;
+    transition: background-color 0.1s ease;
+}
+
+.fixed-button:hover {
+    background-color: var(--rojo);
+    color: var(--bg);
+}
