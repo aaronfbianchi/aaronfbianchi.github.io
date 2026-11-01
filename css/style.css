@@ -584,7 +584,7 @@ p{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 40px;
     justify-content: center;
     margin-top: 30px;
 }
@@ -626,7 +626,7 @@ p{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
     padding: 5px 15px 15px 15px;
 }
 .side-links a{
@@ -646,9 +646,9 @@ p{
     background-color: var(--fg);
     color: var(--bg);
 }
-/* .side-item *{
-    text-size-adjust: 115%;
-} */
+.side-item *{
+    text-size-adjust: 200%;
+}
 
 @media (max-width: 1200px){
     .contenedor-side{
