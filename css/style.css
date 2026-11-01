@@ -678,7 +678,7 @@ p{
     text-size-adjust: 100%;
 }
 .contenedor-streaming a img{
-    height: 115px;
+    height: 120px;
     aspect-ratio: 112.5/90;
     display: block;
 }
