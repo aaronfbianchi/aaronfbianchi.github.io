@@ -45,7 +45,7 @@ body{
     padding: 0;
     /* overflow-x: hidden; */
     width: 100%;
-    min-height: 100vh;
+    min-height: 200vh;
 }
 
 .contenedor{
@@ -769,28 +769,59 @@ p{
     image-rendering: crisp-edges;
 }
 
-/* GO BACK BUTTON ////////////////////////////////////////////////////////////// */
+/* FIXED BUTTON ////////////////////////////////////////////////////////////// */
 
 .fixed-button {
     position: fixed;
-    bottom: 20px; 
-    right: 20px; 
-    width: 50px;
-    height: 40px;
+    height: 50px;
+    aspect-ratio: 1;
     padding: 0px;
-    padding-top: 10px;
     border: var(--rojo) 3px solid;
     background-color: #000000bb;
     font-weight: bold;
     font-size: 30px;
     text-decoration: none;
-    color: var(--rojo);
     z-index: 1000;
     text-align: center;
     transition: background-color 0.1s ease;
+    display: flex;
+}
+.fixed-button p{
+    color: var(--rojo);
+    margin: auto;
+    padding: 0;
 }
 
 .fixed-button:hover {
     background-color: var(--rojo);
+}
+.fixed-button:hover p{
     color: var(--bg);
 }
+/* GO BACK BUTTON ////////////////////////////////////////////////////////////// */
+
+.back-button{
+    top: 20px; 
+    left: 20px; 
+}
+.back-button p{
+    transform: translateY(-2px);
+}
+
+/* GO UP BUTTON ////////////////////////////////////////////////////////////// */
+
+.up-button{
+    bottom: 20px; 
+    right: 20px; 
+}
+.up-button p{
+    transform: translateY(4px);
+}
+
+/* SCALE BUTTON ////////////////////////////////////////////////////////////// */
+@media (max-width:1200px){
+    .fixed-button{
+        transform: scale(1.5);
+    }
+}
+
