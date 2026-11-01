@@ -383,26 +383,26 @@ p{
     text-size-adjust: 110%;
 }
 @media (min-width: 1000px) and (max-width: 1500px) {
-    #portfolio:has(#style-switch:checked) h3 {
+    #portfolio:has(#style-switch:checked) .container-portfolio h3 {
     font-size: 22px;
     }
-    #portfolio:has(#style-switch:checked) p {
+    #portfolio:has(#style-switch:checked) .container-portfolio  p {
     font-size: 18px;
     }
 }
 @media (min-width: 800px) and (max-width: 1000px) {
-    #portfolio:has(#style-switch:checked) h3 {
+    #portfolio:has(#style-switch:checked) .container-portfolio  h3 {
     font-size: 18px;
     }
-    #portfolio:has(#style-switch:checked) p {
+    #portfolio:has(#style-switch:checked) .container-portfolio  p {
     font-size: 14px;
     }
 }
 @media (max-width: 800px) {
-    #portfolio:has(#style-switch:checked) h3 {
+    #portfolio:has(#style-switch:checked) .container-portfolio  h3 {
     font-size: 16px;
     }
-    #portfolio:has(#style-switch:checked) p {
+    #portfolio:has(#style-switch:checked) .container-portfolio  p {
     font-size: 12px;
     }
 }
