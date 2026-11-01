@@ -686,6 +686,12 @@ p{
     color:var(--fg);
     text-align: center;
 }
+.contenedor-streaming a:hover i{
+    transform: scale(1.1);
+}
+.contenedor-streaming a:hover img{
+    transform: scale(1.1);
+}
 
 /* CONTACT ////////////////////////////////////////////////////////////// */
 
