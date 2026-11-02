@@ -248,6 +248,36 @@ p{
     }
 }
 
+/* LSAO WHY ////////////////////////////////////////////////////////////// */
+
+
+.text-why{
+    font-weight: light;
+    font-style: italic;
+    /* width: 50%; */
+}
+.text-why p{
+    color:var(--fg);
+    font-style: normal;
+}
+.text-why p span{
+    color: var(--rojo);
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.list{
+    font-style: normal;
+}
+.list p::before{
+    content: "> ";
+    color: var(--rojo);
+    font-weight: bold;
+    margin: 0 10px 0 5px;
+}
+
+
+
 /* CAROUSEL ////////////////////////////////////////////////////////////// */
 
 .carousel {
@@ -825,5 +855,10 @@ p{
     .fixed-button{
         transform: scale(1.5);
     }
-}
+} 
 
+/* DEMOS ////////////////////////////////////////////////////////////// */
+
+.vid-demos video{
+    width: 100%;
+}
