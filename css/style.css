@@ -219,7 +219,7 @@ p{
 .text-about{
     font-weight: light;
     font-style: italic;
-    width: 50%;
+    /* width: 50%; */
 }
 .text-about p{
     color:var(--fg);
@@ -778,7 +778,6 @@ p{
     padding: 0px;
     border: var(--rojo) 3px solid;
     background-color: #000000bb;
-    font-weight: bold;
     font-size: 30px;
     text-decoration: none;
     z-index: 1000;
@@ -790,6 +789,8 @@ p{
     color: var(--rojo);
     margin: auto;
     padding: 0;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .fixed-button:hover {
@@ -805,6 +806,7 @@ p{
     left: 20px; 
 }
 .back-button p{
+    font-size: 36px;
     transform: translateY(-2px);
 }
 
@@ -815,7 +817,7 @@ p{
     right: 20px; 
 }
 .up-button p{
-    transform: translateY(4px);
+    transform: translateY(3px);
 }
 
 /* SCALE BUTTON ////////////////////////////////////////////////////////////// */
